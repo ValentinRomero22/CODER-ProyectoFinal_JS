@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    background-color: #EBCFB8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 1% 15%;
+}
+
+ul li{
+    display: inline;
+    list-style: none;
+    padding: 0em 0em 0em 2em;
+    font-weight: bold;
+}
+
+aside ul{
+    padding-top: 5%;
+}
+
+aside ul li{
+    padding: 0em 0em 0em 0em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+
+article a img{
+    width: 100%;
+    border-radius: 5%;
+}
+
+footer{
+    display: flex;
+    padding: 3% 15%;
+    background-color: #EBCFB8;
+}
+
+footer h2{
+    font-size: 1.5em;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+
+a h3{
+    font-size: 1em;
+}
+
+form{
+    margin: 1% 0% 5% 0%;
+}
+
+form input{
+    width: 60%;
+    padding: 1%;
+    margin-bottom: 2%;
+    font-family: 'Nunito';
+    font-size: 1em;
+    border: 2px solid #000;
+    border-radius: 0.5em;
+}
+
+form textarea{
+    width: 80%;
+    resize: none;
+    padding: 1%;
+    margin-bottom: 1%;
+    font-family: 'Nunito';
+    font-size: 1em;
+    border: 2px solid #000;
+    border-radius: 0.5em;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #B08074;
+    margin-bottom: 5%;
+}
+
+.contenedorSlider{
+    height: 100vh;
+}
+
+.headerLogo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider {
+	overflow: hidden;
+}
+
+.slider figure {
+	width: 300%;
+	position: relative;
+	animation: 10s slider infinite;
+    display: flex;
+}
+
+.slider figure img {
+	width: 33.333333333%;
+	height : 75vh;
+}
+
+.botones{
+    text-align: center;
+    margin: 1%;
+}
+
+.botones li{
+    display: inline-block;
+}
+
+.botones li a{
+    display: inline-block;
+    background-color: grey;
+    padding: 2%;
+    width: 20px;
+    height: 20px;   
+    border-radius: 100%;
+}
+
+.cuerpo{
+    margin: 2% 15%;
+}
+
+.catalogo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    gap: 2%;
+    margin: 3% 0% 2% 0%;
+}
+
+.recomendado{
+    background-color: #fff;
+    width: 100%;
+    border: 1px solid #fff;
+    font-size: 1em;
+    padding-bottom: 3%;
+}
+
+.boton{
+    padding: 1em 2em;
+    margin-top: 1%;
+    font-size: 1em;
+    border: 2px solid;
+    border-radius: 0.5em;
+    border-color: #B08074;
+    background-color: #ffefe2;
+    color: #B08074;
+    font-weight: bold;
+}
+
+.redes{
+    display: flex;
+    margin-left: 10%;
+    justify-items: center;
+    align-items: center;
+}
+
+.tituloCentrado{
+    text-align: center;
+}
+
+.seccionInfo{
+    padding: 0em 3em 2em 0em; 
+    font-size: 1.8em;
+}
+
+.centradoDerecha{
+    text-align: right;
+    border-left: 10px solid #B08074 ;
+    padding-left: 5em;
+}
+
+.centradoIzquierda{
+    text-align: left;
+    border-right: 10px solid #B08074 ;
+    padding-right: 5em;
+}
+
+.caja{
+    display: flex;
+    flex-direction: row;
+}
+
+.textoPaddingBottom{
+    padding: 0em 0em 1em 0em;
+}
+
+.nombreCliente{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.ubicacion{
+    display: grid;
+    grid-template-areas: 
+    "ubicacion mapa"
+    "contactos mapa";
+    grid-column-gap: 3%;
+    margin-bottom: 5%;
+}
+
+.contactos{
+    grid-area: contactos;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.contacto{
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.mapa{
+    grid-area: mapa;
+}
+
+.estrellas{
+    display: inline-block;
+    margin-top: 1%;
+}
+
+.estrellas:not(:checked) > input{
+    position: absolute;
+    top: -9999px;
+}
+
+.estrellas:not(:checked) > label{
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ccc;
+}
+
+.estrellas:not(:checked) > label:before{
+    content: '★ ';
+}
+
+.estrellas > input:checked ~ label {
+    color: #ffc700;    
+}
+
+.estrellas:not(:checked) > label:hover,
+.estrellas:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+
+.estrellas > input:checked + label:hover,
+.estrellas > input:checked + label:hover ~ label,
+.estrellas > input:checked ~ label:hover,
+.estrellas > input:checked ~ label:hover ~ label,
+.estrellas > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.estrellasDeshabilitadas{
+    display: inline-block;
+}
+
+.estrellasDeshabilitadas:not(:checked) > input{
+    position: absolute;
+    top: -9999px;
+}
+
+.estrellasDeshabilitadas:not(:checked) > label{
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 1.5em;
+    font-style: normal;
+}
+
+.estrellasDeshabilitadas:not(:checked) > label:before{
+    content: '★ ';
+}
+
+.estrellasDeshabilitadas > input:checked ~ label {
+    color: #ffc700;    
+}
+
+@keyframes slider {
+	0% { left: 0; }
+	30% { left: 0; }
+	33% { left: -100%; }
+	63% { left: -100%; }
+	66% { left: -200%; }
+	95% { left: -200%; }
+	100% { left: 0; }
+}
+
+@media screen and (max-width: 1140px){
+    
+    footer{
+        flex-direction: column; 
+        justify-items: left;       
+    }
+
+    footer ul li{
+        padding: 0em 2em 0em 0em;
+    }
+
+    footer p{
+        margin-bottom: 1%;
+    }
+
+    iframe{
+        width: 350px;
+        height: 280px;
+    }
+
+    .redes{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0%;
+    }
+
+    .caja{
+        margin-bottom: 3%;
+    }
+
+    .caja section{
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 1022px){
+
+    header{
+        flex-direction: column;
+    }
+
+    iframe{
+        height: 270px;
+    }
+
+    .catalogo{
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 10%;
+    }
+
+    .seccionInfo{
+        font-size: 1.5em;
+    }
+
+    .ubicacion h3{
+        font-size: 1.2em;
+    }
+
+    .cuerpo p{
+        font-size: 0.9em;
+    }
+
+    .caja h3{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    h2{
+        font-size: 1.5em;
+    }
+
+    h3{
+        font-size: 1.2em;
+    }
+    
+    a{
+        font-size: 0.8em;
+    }
+
+    header{
+        padding: 1% 10%;
+    }
+
+    form input{
+        width: 80%;
+    }
+    
+    form textarea{
+        width: 100%;
+    }
+
+    .caja{
+        flex-direction: column;
+    }
+
+    .boton{
+        margin-bottom: 5%;
+    }
+
+    .seccionInfo{
+        font-size: 1em;
+    }
+
+    .ubicacion{
+        display: grid;
+        grid-template-areas: 
+        "ubicacion"
+        "mapa"
+        "contactos";
+        grid-column-gap: 3%;
+        margin-bottom: 5%;
+    }
+
+    .ubicacion p{
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+      
+    a h3{
+        font-size: 1.5em;
+    }  
+
+    .catalogo{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 30%;
+    }
+
+    .contacto h3{
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
