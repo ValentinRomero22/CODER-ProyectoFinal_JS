@@ -197,20 +197,24 @@ iframe{
 }
 
 .seccionInfo{
+    display: flex;
     padding: 0em 3em 2em 0em; 
     font-size: 1.8em;
 }
 
 .centradoDerecha{
     text-align: right;
-    border-left: 10px solid #B08074 ;
-    padding-left: 5em;
+    padding-left: 10%;    
 }
 
 .centradoIzquierda{
     text-align: left;
-    border-right: 10px solid #B08074 ;
-    padding-right: 5em;
+    padding-right: 10%;
+}
+
+.borde{
+    background-color: #B08074;
+    width: 5%;
 }
 
 .caja{
