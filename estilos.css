@@ -20,6 +20,10 @@ header{
     padding: 1% 15%;
 }
 
+nav ul{
+    margin-bottom: 0%;
+}
+
 ul li{
     display: inline;
     list-style: none;
@@ -28,6 +32,7 @@ ul li{
 }
 
 aside ul{
+    padding-left: 0%;
     padding-top: 5%;
 }
 
@@ -35,6 +40,10 @@ aside ul li{
     padding: 0em 0em 0em 0em;
     font-weight: normal;
     font-style: italic;
+}
+
+aside ul li p{
+    margin-bottom: 0%;
 }
 
 a{
@@ -56,6 +65,15 @@ footer{
 
 footer h2{
     font-size: 1.5em;
+    font-weight: bold;
+}
+
+h1{
+    color: #000;
+    font-family: 'Nunito';
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0%;
 }
 
 h2{
@@ -156,6 +174,10 @@ iframe{
     margin: 2% 15%;
 }
 
+.cuerpo h2{
+    animation-duration: 3s;
+}
+
 .catalogo{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -222,6 +244,10 @@ iframe{
     flex-direction: row;
 }
 
+.caja{
+    padding-right: 5%;
+}
+
 .textoPaddingBottom{
     padding: 0em 0em 1em 0em;
 }
@@ -236,8 +262,12 @@ iframe{
     grid-template-areas: 
     "ubicacion mapa"
     "contactos mapa";
-    grid-column-gap: 3%;
+    grid-template-columns: 60% 40%;
     margin-bottom: 5%;
+}
+
+.ubicacionDireccion{
+    padding-right: 10%;
 }
 
 .contactos{
@@ -245,12 +275,14 @@ iframe{
     display: flex;
     flex-direction: column;
     margin-top: 3%;
+    padding-right: 10%;
 }
 
 .contacto{
     display: flex;
     align-items: center;
     margin-top: 3%;
+    padding-right: 10%;
 }
 
 .mapa{
