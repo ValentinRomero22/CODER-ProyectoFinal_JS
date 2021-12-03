@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre nosotros</title>
     <link rel="icon" href="../imagenes/favicon.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="../estilos.css">
@@ -16,17 +14,32 @@
 <body>
     <header>
         <div class="headerLogo">
-            <a href="../index.html"><img src="../imagenes/logo.png" alt="Logo principal"></a>    
-            <h1>Pastas Trivelli's</h1>      
+            <a href="../index.html"><img src="../imagenes/logo.png" alt="Logo principal"></a>
+            <h1>Pastas Trivelli's</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="pastas.html">Pastas</a></li>
-                <li><a href="postres.html">Postres</a></li>
-                <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid justify-content-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#desplegable" aria-controls="desplegable" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="desplegable">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link-active" aria-current="page" href="pastas.html">Pastas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-active" href="postres.html">Postres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-active" href="sobreNosotros.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link-active" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
     </header>
     <section class="cuerpo">
         <h2 class="tituloCentrado animate__animated animate__fadeIn">Sobre nosotros</h2>
@@ -74,10 +87,8 @@
         </div>    
     </footer>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-    crossorigin="anonymous">
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>AOS.init();</script>
 </html>
