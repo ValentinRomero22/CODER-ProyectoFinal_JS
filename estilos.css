@@ -412,10 +412,6 @@ article p:hover{
 
 @media screen and (max-width: 1022px){
 
-    /* header{
-        flex-direction: column;
-    } */
-
     iframe{
         height: 270px;
     }
