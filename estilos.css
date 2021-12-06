@@ -423,11 +423,7 @@ article p:hover{
 
     .seccionInfo{
         font-size: 1.5em;
-    }
-
-    .ubicacion h3{
-        font-size: 1.2em;
-    }
+    }    
 
     .cuerpo p{
         font-size: 0.9em;
@@ -435,6 +431,26 @@ article p:hover{
 
     .caja h3{
         font-size: 1.2em;
+    }
+
+    .ubicacion{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "ubicacion"
+        "mapa"
+        "contactos";
+        grid-column-gap: 3%;
+        margin-bottom: 5%;
+        padding: 0%;
+    }
+
+    .ubicacion h3{
+        font-size: 1.2em;
+    }
+
+    .ubicacionDireccion{
+        padding: 0%;
     }
 }
 
@@ -476,16 +492,6 @@ article p:hover{
         font-size: 1em;
     }
 
-    .ubicacion{
-        display: grid;
-        grid-template-areas: 
-        "ubicacion"
-        "mapa"
-        "contactos";
-        grid-column-gap: 3%;
-        margin-bottom: 5%;
-    }
-
     .ubicacion p{
         margin-bottom: 3%;
     }
@@ -495,7 +501,16 @@ article p:hover{
       
     a h3{
         font-size: 1.5em;
-    }  
+    } 
+    
+    h1{
+        font-size: 1.5em;
+    }
+
+    .mapa iframe{
+        width: 280px;
+        height: 250px;
+    }
 
     .catalogo{
         grid-template-columns: repeat(1, 1fr);
@@ -507,7 +522,17 @@ article p:hover{
     }
 }
 
+@media screen and (max-width: 378px) {
 
+    h1{
+        font-size: 1em;
+    }
+
+    .mapa iframe{
+        width: 240px;
+        height: 200px;
+    }
+}
 
 
 
