@@ -1,0 +1,20 @@
+header{
+    width: 100%;
+    background-color: $rosaFondo;
+    display: flex;
+    justify-content: space-between;
+    align-items: $centrado;
+    height: auto;
+    padding: 1% 15%;
+
+    a{
+        font-weight: $negrita;
+    }
+}
+
+nav{
+
+    ul{
+        margin-bottom: 0%;
+    }
+}

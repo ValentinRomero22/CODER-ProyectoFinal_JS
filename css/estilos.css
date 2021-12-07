@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
 
-body{
+body{ /*general*/
     font-family: 'Nunito', sans-serif;
 }
 
-*{
+*{ /*general*/
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
 
-header{
+header{ /*header*/
     width: 100%;
     background-color: #EBCFB8;
     display: flex;
@@ -20,76 +20,76 @@ header{
     padding: 1% 15%;
 }
 
-header a{
+header a{ /*header*/
     font-weight: bold;
 }
 
-nav ul{
+nav ul{ /*header*/
     margin-bottom: 0%;
 }
 
-ul li{
+ul li{ /*general*/
     display: inline;
     list-style: none;
     padding: 0em 0em 0em 1.5em;
 }
 
-ul{
+ul{ /*general*/
     margin-left: 0%;
 }
 
-aside ul{
+aside ul{ /*valoraciones*/
     padding-left: 0%;
     padding-top: 5%;
 }
 
-aside ul li{
+aside ul li{ /*valoraciones*/
     padding: 0em 0em 0em 0em;
     font-weight: normal;
     font-style: italic;
 }
 
-aside ul li p{
+aside ul li p{ /*valoraciones*/
     margin-bottom: 0%;
 }
 
-a{
+a{ /*general*/
     text-decoration: none;
     color: #000;
     font-size: 1em;
 }
 
-a h3{
+a h3{ /*general*/
     font-size: 1em;
 }
 
-article a img{
+article a img{ /*productos*/
     width: 100%;
     border-radius: 5%;
     margin-bottom: 5%;
 }
 
-article a p{
+article a p{ /*productos*/
     font-size: 0.9em;
     font-style: italic;
 }
 
-footer{
+footer{ /*footer*/
     display: flex;
     padding: 3% 15%;
     background-color: #EBCFB8;
 }
 
-footer h2{
+footer h2{ /*footer*/
     font-size: 1.5em;
     font-weight: bold;
 }
 
-ul{
+ul{ /*general*/
     padding-left: 0%;
 }
 
-h1{
+h1{ /*general*/
     color: #000;
     font-family: 'Nunito';
     font-size: 2em;
@@ -97,26 +97,26 @@ h1{
     margin-bottom: 0%;
 }
 
-h2{
+h2{ /*general*/
     font-size: 2em;
 }
 
-h3{
+h3{ /*general*/
     font-size: 1.5em;
     text-decoration: none;
     color: #000
 }
 
-p{
+p{ /*general*/
     text-decoration: none;
     color: #000;
 }
 
-form{
+form{ /*contacto*/
     margin: 1% 0% 5% 0%;
 }
 
-form input{
+form input{ /*contacto*/
     width: 60%;
     padding: 1%;
     margin-bottom: 2%;
@@ -126,7 +126,7 @@ form input{
     border-radius: 0.5em;
 }
 
-form textarea{
+form textarea{ /*contacto*/
     width: 80%;
     resize: none;
     padding: 1%;
@@ -137,7 +137,7 @@ form textarea{
     border-radius: 0.5em;
 }
 
-iframe{
+iframe{ /*contacto*/
     width: 100%;
     height: 100%;
     border: 1px solid #B08074;

@@ -1,0 +1,51 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $fuente;
+}
+
+ul{
+    margin-left: 0%;
+    padding-left: 0%;
+
+    li{
+        display: inline;
+        list-style: $no;
+        padding: 0em 0em 0em 1.5em;
+    }
+}
+
+a{
+    text-decoration: $no;
+
+    h3{
+        font-size: 1em;
+    }
+}
+
+h1{
+    color: $negro;
+    font-family: $fuente;
+    font-size: 2em;
+    font-weight: $negrita;
+    margin-bottom: 0%;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+    text-decoration: $no;
+    color: $negro;
+}
+
+p{
+    text-decoration: $no;
+    color: $negro;
+}
