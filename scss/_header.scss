@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    background-color: $rosaFondo;
+    background-color: $claro;
     display: flex;
     justify-content: space-between;
     align-items: $centrado;
@@ -10,10 +10,20 @@ header{
     a{
         font-weight: $negrita;
     }
+
+    a:hover{
+        color: $oscuro;
+    }
+}
+
+.headerLogo{
+    display: flex;
+    justify-content: space-between;
+    align-items: $centrado;
 }
 
 nav{
-
+    
     ul{
         margin-bottom: 0%;
     }

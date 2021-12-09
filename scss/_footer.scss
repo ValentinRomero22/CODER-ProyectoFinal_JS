@@ -1,10 +1,20 @@
 footer{
     display: flex;
     padding: 3% 15%;
-    background-color: $rosaFondo;
+    background-color: $claro;
 
     h2{
         font-size: 1.5em;
         font-weight: $negrita;
+    }
+}
+
+.redes{
+    display: flex;
+    margin-left: 10%;
+    align-items: $centrado;
+
+    ul li:not(:first-child){
+        padding-left: 1em;
     }
 }

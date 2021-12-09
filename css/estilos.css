@@ -144,39 +144,21 @@ iframe{ /*contacto*/
     margin-bottom: 5%;
 }
 
-.headerLogo{
+.headerLogo{ /*header*/
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.botones{
-    text-align: center;
-    margin: 1%;
-}
-
-.botones li{
-    display: inline-block;
-}
-
-.botones li a{
-    display: inline-block;
-    background-color: grey;
-    padding: 2%;
-    width: 20px;
-    height: 20px;   
-    border-radius: 100%;
-}
-
-.cuerpo{
+.cuerpo{ /*general*/
     margin: 2% 15%;
 }
 
-.cuerpo h2{
+.cuerpo h2{ /*general*/
     animation-duration: 3s;
 }
 
-.catalogo{
+.catalogo{ /*productos*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
@@ -185,7 +167,7 @@ iframe{ /*contacto*/
     margin: 3% 0% 2% 0%;
 }
 
-.recomendado{
+.recomendado{ /*productos*/
     color: #000;
     background-color: #fff;
     width: 100%;
@@ -196,7 +178,7 @@ iframe{ /*contacto*/
     animation-duration: 0.8s;
 }
 
-.boton{
+.boton{ /*general*/
     padding: 1em 2em;
     margin-top: 1%;
     font-size: 1em;
@@ -208,57 +190,57 @@ iframe{ /*contacto*/
     font-weight: bold;
 }
 
-.redes{
+.redes{ /*footer*/
     display: flex;
     margin-left: 10%;
     justify-items: center;
     align-items: center;
 }
 
-.tituloCentrado{
+.tituloCentrado{ /*general*/
     text-align: center;
 }
 
-.seccionInfo{
+.seccionInfo{ /*sn*/
     display: flex;
     padding: 0em 3em 2em 0em; 
     font-size: 1.6em;
 }
 
-.centradoDerecha{
+.centradoDerecha{ /*sn*/
     text-align: right;
     padding-left: 10%;    
 }
 
-.centradoIzquierda{
+.centradoIzquierda{ /*sn*/
     text-align: left;
     padding-right: 10%;
 }
 
-.borde{
+.borde{ /*sn*/
     background-color: #B08074;
     width: 5%;
 }
 
-.caja{
+.cajaEstrellas{ /*contecto*/
     display: flex;
     flex-direction: row;
 }
 
-.caja{
+.cajaEstrellas{ /*contecto*/
     padding-right: 5%;
 }
 
-.textoPaddingBottom{
+.textoPaddingBottom{ /*general*/
     padding: 0em 0em 1em 0em;
 }
 
-.nombreCliente{
+.nombreCliente{ /*contacto*/
     font-weight: bold;
     font-style: normal;
 }
 
-.ubicacion{
+.ubicacion{ /*contacto*/
     display: grid;
     grid-template-areas: 
     "ubicacion mapa"
@@ -267,11 +249,11 @@ iframe{ /*contacto*/
     margin-bottom: 5%;
 }
 
-.ubicacionDireccion{
+.ubicacionDireccion{ /*contacto*/
     padding-right: 10%;
 }
 
-.contactos{
+.contactos{ /*contacto*/
     grid-area: contactos;
     display: flex;
     flex-direction: column;
@@ -279,28 +261,28 @@ iframe{ /*contacto*/
     padding-right: 10%;
 }
 
-.contacto{
+.contacto{ /*contacto*/
     display: flex;
     align-items: center;
     margin-top: 3%;
     padding-right: 10%;
 }
 
-.mapa{
+.mapa{ /*contacto*/
     grid-area: mapa;
 }
 
-.estrellas{
+.estrellas{ /*estrellas*/
     display: inline-block;
     margin-top: 1%;
 }
 
-.estrellas:not(:checked) > input{
+.estrellas:not(:checked) > input{ /*estrellas*/
     position: absolute;
     top: -9999px;
 }
 
-.estrellas:not(:checked) > label{
+.estrellas:not(:checked) > label{ /*estrellas*/
     float: right;
     width: 1em;
     overflow: hidden;
@@ -310,20 +292,20 @@ iframe{ /*contacto*/
     color: #ccc;
 }
 
-.estrellas:not(:checked) > label:before{
+.estrellas:not(:checked) > label:before{ /*estrellas*/
     content: '★ ';
 }
 
-.estrellas > input:checked ~ label {
+.estrellas > input:checked ~ label { /*estrellas*/
     color: #ffc700;    
 }
 
-.estrellas:not(:checked) > label:hover,
+.estrellas:not(:checked) > label:hover, /*estrellas*/
 .estrellas:not(:checked) > label:hover ~ label {
     color: #deb217;  
 }
 
-.estrellas > input:checked + label:hover,
+.estrellas > input:checked + label:hover, /*estrellas*/
 .estrellas > input:checked + label:hover ~ label,
 .estrellas > input:checked ~ label:hover,
 .estrellas > input:checked ~ label:hover ~ label,
@@ -331,16 +313,16 @@ iframe{ /*contacto*/
     color: #c59b08;
 }
 
-.estrellasDeshabilitadas{
+.estrellasDeshabilitadas{ /*estrellas*/
     display: inline-block;
 }
 
-.estrellasDeshabilitadas:not(:checked) > input{
+.estrellasDeshabilitadas:not(:checked) > input{ /*estrellas*/
     position: absolute;
     top: -9999px;
 }
 
-.estrellasDeshabilitadas:not(:checked) > label{
+.estrellasDeshabilitadas:not(:checked) > label{ /*estrellas*/
     float: right;
     width: 1em;
     overflow: hidden;
@@ -351,27 +333,27 @@ iframe{ /*contacto*/
     font-style: normal;
 }
 
-.estrellasDeshabilitadas:not(:checked) > label:before{
+.estrellasDeshabilitadas:not(:checked) > label:before{ /*estrellas*/
     content: '★ ';
 }
 
-.estrellasDeshabilitadas > input:checked ~ label {
+.estrellasDeshabilitadas > input:checked ~ label { /*estrellas*/
     color: #ffc700;    
 }
 
-header a:hover{
+header a:hover{ /*header*/
     color: #B08074;
 }
 
-article h3:hover{
+article h3:hover{ /*productos*/
     color: #000;
 }
 
-article p:hover{
+article p:hover{ /*productos*/
     color: #000;
 }
 
-.recomendado:hover{
+.recomendado:hover{ /*productos*/
     border-bottom: 3px solid #B08074;
 }
 
@@ -401,11 +383,11 @@ article p:hover{
         margin-left: 0%;
     }
 
-    .caja{
+    .cajaEstrellas{
         margin-bottom: 3%;
     }
 
-    .caja section{
+    .cajaEstrellas section{
         margin-right: 5%;
     }
 }
@@ -429,7 +411,7 @@ article p:hover{
         font-size: 0.9em;
     }
 
-    .caja h3{
+    .cajaEstrellas h3{
         font-size: 1.2em;
     }
 
@@ -480,7 +462,7 @@ article p:hover{
         width: 100%;
     }
 
-    .caja{
+    .cajaEstrellas{
         flex-direction: column;
     }
 

@@ -26,6 +26,62 @@ form{
 iframe{
     width: 100%;
     height: 100%;
-    border: 1px solid $rosaFondo;
+    border: 1px solid $claro;
     margin-bottom: 5%;
+}
+
+.cajaEstrellas{
+    display: flex;
+    flex-direction: row;
+    padding-right: 5%;
+
+    section{
+        padding-right: 3%;
+    }
+}
+
+.nombreCliente{
+    font-weight: $negrita;
+    font-style: normal;
+}
+
+.ubicacion{
+    display: grid;
+    grid-template-areas: 
+    "ubicacion mapa"
+    "contactos mapa";
+    grid-template-columns: 60% 40%;
+    margin-bottom: 5%;
+}
+
+.ubicacionDireccion{
+    padding-right: 10%;
+}
+
+.contacto{
+    display: flex;
+    align-items: $centrado;
+    margin-top: 3%;
+    padding-right: 10%;    
+
+    p{
+        margin-bottom: 0%;
+        padding-left: 3%;
+    }
+}
+
+.contactos{ 
+    grid-area: contactos;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    padding-right: 10%;
+
+    h3{
+        font-size: 1.2em;
+    }
+}
+
+.mapa{
+    grid-area: mapa;
 }
