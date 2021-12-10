@@ -5,7 +5,12 @@ header{
     justify-content: space-between;
     align-items: $centrado;
     height: auto;
-    padding: 1% 15%;
+    padding: 0.5% 15%;
+
+    h1{
+        font-family: $marca;
+        font-size: 1.8em;
+    }
 
     a{
         font-weight: $negrita;
@@ -13,6 +18,17 @@ header{
 
     a:hover{
         color: $oscuro;
+    }
+
+    ul{
+        margin-left: 0%;
+        padding-left: 0%;
+    
+        li{
+            display: inline;
+            list-style: $no;
+            padding: 0em 0em 0em 1.5em;
+        }
     }
 }
 
@@ -26,5 +42,9 @@ nav{
     
     ul{
         margin-bottom: 0%;
+
+        li{
+            font-weight: 100;
+        }
     }
 }

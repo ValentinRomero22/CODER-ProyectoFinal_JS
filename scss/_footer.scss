@@ -1,20 +1,42 @@
 footer{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 3% 15%;
     background-color: $claro;
 
     h2{
-        font-size: 1.5em;
+        font-family: $marca;
+        font-size: 1.8em;
         font-weight: $negrita;
+    }
+}
+
+.slogan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        margin: 0%;
+    }
+
+    p{
+        font-size: 0.9em;
     }
 }
 
 .redes{
     display: flex;
-    margin-left: 10%;
-    align-items: $centrado;
+    justify-content: center;
 
-    ul li:not(:first-child){
-        padding-left: 1em;
+    ul{
+        margin: 0%;
+        padding: 0%;
+        
+        li{
+            display: inline;
+            list-style: $no;
+        }
     }
 }
