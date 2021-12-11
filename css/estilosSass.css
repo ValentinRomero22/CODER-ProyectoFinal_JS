@@ -411,13 +411,13 @@ footer {
     height: 250px; }
   .catalogo {
     grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 30%; }
+    margin-bottom: 40%; }
+    .catalogo p {
+      font-size: 1.1em; }
   .contacto h3 {
     font-size: 1em; } }
 
 @media screen and (max-width: 378px) {
-  h1 {
-    font-size: 1em; }
   .mapa iframe {
     width: 240px;
     height: 200px; } }
