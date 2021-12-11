@@ -17,7 +17,7 @@ a {
     font-size: 1em; }
 
 h1 {
-  color: #000;
+  color: #292e33;
   font-family: "Nunito";
   font-size: 2em;
   font-weight: bold;
@@ -35,33 +35,24 @@ p {
   text-decoration: none;
   color: #000; }
 
-.botones {
-  text-align: center;
-  margin: 1%; }
-  .botones li {
-    display: inline-block; }
-    .botones li a {
-      display: inline-block;
-      background-color: #ccc;
-      padding: 2%;
-      width: 20px;
-      height: 20px;
-      border-radius: 100%; }
-
 .cuerpo {
   margin: 2% 15%; }
   .cuerpo h2 {
     animation-duration: 3s; }
 
 .boton {
-  padding: 1em 2em;
-  margin-top: 1%;
+  padding: 1% 2%;
   font-size: 1em;
-  border: 2px solid #B08074;
-  border-radius: 0.5em;
-  background-color: #ffefe2;
-  color: #B08074;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+  background-color: #fff;
+  color: #000;
   font-weight: bold; }
+  .boton:hover {
+    border: 1px solid #74554d;
+    background-color: #ffefe2;
+    color: #74554d;
+    font-weight: bold; }
 
 .tituloCentrado {
   text-align: center; }
@@ -81,9 +72,10 @@ header {
     font-family: "Satisfy";
     font-size: 1.8em; }
   header a {
-    font-weight: bold; }
+    font-weight: bold;
+    white-space: nowrap; }
   header a:hover {
-    color: #B08074; }
+    color: #74554d; }
   header ul {
     margin-left: 0%;
     padding-left: 0%; }
@@ -94,8 +86,11 @@ header {
 
 .headerLogo {
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%; }
+  .headerLogo div {
+    margin-right: 3%; }
 
 nav ul {
   margin-bottom: 0%; }
@@ -135,7 +130,7 @@ article p :hover {
   border-bottom: 3px solid transparent;
   animation-duration: 0.8s; }
   .recomendado:hover {
-    border-bottom: 3px solid #B08074; }
+    border-bottom: 3px solid #74554d; }
 
 .seccionInfo {
   display: flex;
@@ -151,7 +146,7 @@ article p :hover {
   padding-right: 10%; }
 
 .borde {
-  background-color: #B08074;
+  background-color: #74554d;
   width: 5%; }
 
 aside ul li {
@@ -283,31 +278,62 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3% 15%;
+  padding: 2% 15%;
   background-color: #EBCFB8; }
   footer h2 {
     font-family: "Satisfy";
     font-size: 1.8em;
     font-weight: bold; }
+  footer ul {
+    margin: 0%;
+    padding: 0%; }
+    footer ul li {
+      display: inline;
+      list-style: none; }
 
 .slogan {
   display: flex;
   flex-direction: column;
   align-items: center; }
   .slogan h2 {
-    margin: 0%; }
+    margin: 0%;
+    color: #292e33; }
   .slogan p {
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    font-weight: bold; }
 
-.redes {
+.redes ul {
   display: flex;
   justify-content: center; }
-  .redes ul {
-    margin: 0%;
-    padding: 0%; }
-    .redes ul li {
-      display: inline;
-      list-style: none; }
+  .redes ul li:not(:first-child) {
+    margin-left: 2%; }
+
+.facebook img:last-child {
+  display: none; }
+
+.facebook:hover img:last-child {
+  display: block; }
+
+.facebook:hover img:first-child {
+  display: none; }
+
+.instagram img:last-child {
+  display: none; }
+
+.instagram:hover img:last-child {
+  display: block; }
+
+.instagram:hover img:first-child {
+  display: none; }
+
+.youtube img:last-child {
+  display: none; }
+
+.youtube:hover img:last-child {
+  display: block; }
+
+.youtube:hover img:first-child {
+  display: none; }
 
 @media screen and (max-width: 1140px) {
   footer {
