@@ -1,0 +1,9 @@
+@mixin m_boton($padding, $font-size, $border, $border-radius, $background-color, $color, $font-weight){
+    padding: $padding;
+    font-size: $font-size;
+    border: $border;
+    border-radius: $border-radius;
+    background-color: $background-color;
+    color: $color;
+    font-weight: $font-weight;
+}
