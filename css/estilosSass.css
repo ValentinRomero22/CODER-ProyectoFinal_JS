@@ -13,8 +13,6 @@ a {
   text-decoration: none;
   color: #000;
   font-size: 1em; }
-  a h3 {
-    font-size: 1em; }
 
 h1 {
   color: #292e33;
@@ -28,11 +26,9 @@ h2 {
 
 h3 {
   font-size: 1.5em;
-  text-decoration: none;
   color: #000; }
 
 p {
-  text-decoration: none;
   color: #000; }
 
 .cuerpo {
@@ -60,20 +56,18 @@ p {
 .textoPaddingBottom {
   padding: 0em 0em 1em 0em; }
 
-.input, form input, form textarea {
-  font-family: "Nunito";
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 0.3em;
-  padding: 1%;
-  margin-bottom: 2%; }
+.flexItemCentrado, header, .headerLogo, .contacto, .slogan {
+  display: flex;
+  align-items: center; }
+
+.flexJustifyCentrado, footer, .redes ul {
+  display: flex;
+  justify-content: center; }
 
 header {
   width: 100%;
   background-color: #EBCFB8;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   height: auto;
   padding: 0.5% 15%; }
   header h1 {
@@ -93,9 +87,7 @@ header {
       padding: 0em 0em 0em 1.5em; }
 
 .headerLogo {
-  display: flex;
   justify-content: flex-start;
-  align-items: center;
   width: 100%; }
   .headerLogo div {
     margin-right: 3%; }
@@ -114,11 +106,12 @@ article a p {
   font-size: 0.9em;
   font-style: italic; }
 
-article h3 :hover {
+article a:hover {
   color: #000; }
 
-article p :hover {
-  color: #000; }
+article a h4 {
+  text-decoration: none;
+  font-size: 1.2em; }
 
 .catalogo {
   display: grid;
@@ -165,9 +158,21 @@ aside ul li {
 form {
   margin: 1% 0% 5% 0%; }
   form input {
-    width: 60%; }
+    width: 60%;
+    font-family: "Nunito";
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+    padding: 1%;
+    margin-bottom: 2%; }
   form textarea {
     width: 80%;
+    font-family: "Nunito";
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.3em;
+    padding: 1%;
+    margin-bottom: 2%;
     resize: none; }
 
 iframe {
@@ -203,8 +208,6 @@ iframe {
   padding-right: 10%; }
 
 .contacto {
-  display: flex;
-  align-items: center;
   margin-top: 3%;
   padding-right: 10%; }
   .contacto p {
@@ -271,9 +274,7 @@ iframe {
     color: #ffc700; }
 
 footer {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 2% 15%;
   background-color: #EBCFB8; }
   footer h2 {
@@ -288,9 +289,7 @@ footer {
       list-style: none; }
 
 .slogan {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
   .slogan h2 {
     margin: 0%;
     color: #292e33; }
@@ -298,11 +297,8 @@ footer {
     font-size: 0.9em;
     font-weight: bold; }
 
-.redes ul {
-  display: flex;
-  justify-content: center; }
-  .redes ul li:not(:first-child) {
-    margin-left: 2%; }
+.redes ul li:not(:first-child) {
+  margin-left: 2%; }
 
 .facebook img:last-child {
   display: none; }

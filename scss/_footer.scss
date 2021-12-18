@@ -1,7 +1,6 @@
 footer{
-    display: flex;
+    @extend .flexJustifyCentrado;
     flex-direction: column;
-    justify-content: center;
     padding: 2% 15%;
     background-color: $claro;
 
@@ -23,9 +22,8 @@ footer{
 }
 
 .slogan{
-    display: flex;
+    @extend .flexItemCentrado;
     flex-direction: column;
-    align-items: center;
 
     h2{
         margin: 0%;
@@ -41,8 +39,7 @@ footer{
 .redes{
 
     ul{
-        display: flex;
-        justify-content: center;
+        @extend .flexJustifyCentrado;
         
         li:not(:first-child){
             margin-left: 2%;
@@ -53,7 +50,7 @@ footer{
 .facebook {
 
     & img:last-child{
-        display: none;
+        display: $no;
     }
 
     &:hover img:last-child{
@@ -61,14 +58,14 @@ footer{
     }
 
     &:hover img:first-child{
-        display: none;
+        display: $no;
     }
 }
 
 .instagram {
 
     & img:last-child{
-        display: none;
+        display: $no;
     }
 
     &:hover img:last-child{
@@ -76,14 +73,14 @@ footer{
     }
 
     &:hover img:first-child{
-        display: none;
+        display: $no;
     }
 }
 
 .youtube {
 
     & img:last-child{
-        display: none;
+        display: $no;
     }
 
     &:hover img:last-child{
@@ -91,6 +88,6 @@ footer{
     }
 
     &:hover img:first-child{
-        display: none;
+        display: $no;
     }
 }

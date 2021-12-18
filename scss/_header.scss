@@ -1,9 +1,8 @@
 header{
+    @extend .flexItemCentrado;
     width: 100%;
     background-color: $claro;
-    display: flex;
     justify-content: space-between;
-    align-items: $centrado;
     height: auto;
     padding: 0.5% 15%;
 
@@ -34,9 +33,8 @@ header{
 }
 
 .headerLogo{
-    display: flex;
+    @extend .flexItemCentrado;
     justify-content: flex-start;
-    align-items: $centrado;
     width: 100%;
 
     div{

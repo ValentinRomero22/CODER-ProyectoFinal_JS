@@ -15,10 +15,6 @@ a{
     text-decoration: $no;
     color: $negro;
     font-size: 1em;
-
-    h3{
-        font-size: 1em;
-    }
 }
 
 h1{
@@ -35,12 +31,10 @@ h2{
 
 h3{
     font-size: 1.5em;
-    text-decoration: $no;
     color: $negro;
 }
 
 p{
-    text-decoration: $no;
     color: $negro;
 }
 
@@ -52,9 +46,15 @@ p{
     }
 }
 
-.boton{
-    @include m_boton(1% 2%, 1em, 1px solid $gris, 0.3em, $blanco, $negro, $negrita);
-    
+.boton{    
+    padding: 1% 2%;
+    font-size: 1em;
+    border: 1px solid $gris;
+    border-radius: 0.3em;
+    background-color: $blanco;
+    color: $negro;
+    font-weight: $negrita;
+
     &:hover{
         border: 1px solid $oscuro;
         background-color: $claroAcentuado;
@@ -71,11 +71,12 @@ p{
     padding: 0em 0em 1em 0em;
 }
 
-.input{
-    font-family: $fuente;
-    font-size: 1em;
-    border: 1px solid $gris;
-    border-radius: 0.3em;
-    padding: 1%;
-    margin-bottom: 2%;
+.flexItemCentrado{
+    display: flex;
+    align-items: $centrado;
+}
+
+.flexJustifyCentrado{
+    display: flex;
+    justify-content: $centrado;
 }
