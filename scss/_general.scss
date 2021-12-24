@@ -53,12 +53,11 @@ p{
     border-radius: 0.3em;
     background-color: $blanco;
     color: $negro;
-    font-weight: $negrita;
 
     &:hover{
         border: 1px solid $oscuro;
-        background-color: $claroAcentuado;
-        color: $oscuro;
+        background-color: $oscuro;
+        color: $blanco;
         font-weight: $negrita;
     }
 }
