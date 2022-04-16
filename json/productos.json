@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1, 
+        "descripcion": "Sorrentinos de calabaza",
+        "detalle": "Cocción: suben y 2 minutos de hervor",
+        "precio": 310,
+        "imagen": "/imagenes/sorrentinos_calabaza.png"
+    },
+    {
+        "id": 2, 
+        "descripcion": "Ñoquis de papa",
+        "detalle": "Cocción: suben y 3 minutos de hervor",
+        "precio": 280,
+        "imagen": "/imagenes/nioquis_papa.png"
+    },
+    {
+        "id": 3, 
+        "descripcion": "Capeletis sin glúten",
+        "detalle": "Cocción: suben y 2 minutos de hervor",
+        "precio": 270,
+        "imagen": "/imagenes/capeletis.png"
+    },
+    {
+        "id": 4, 
+        "descripcion": "Ravioles integrales",
+        "detalle": "Cocción: suben y 2 minutos de hervor",
+        "precio": 280,
+        "imagen": "/imagenes/ravioles.png"
+    },
+    {
+        "id": 5, 
+        "descripcion": "Tallarines de verdura",
+        "detalle": "Cocción: suben y 1 minuto de hervor",
+        "precio": 210,
+        "imagen": "/imagenes/tallarines_verdura.png"
+    },
+    {
+        "id": 6, 
+        "descripcion": "Raviolones de jamón y queso",
+        "detalle": "Cocción: suben y 2 minutos de hervor",
+        "precio": 310,
+        "imagen": "/imagenes/raviolones.png"
+    },
+    {
+        "id": 7, 
+        "descripcion": "Tortelines",
+        "detalle": "Cocción: suben y 3 minutos de hervor",
+        "precio": 295,
+        "imagen": "/imagenes/tortelines.png"
+    },
+    {
+        "id": 8, 
+        "descripcion": "Tallarines al huevo",
+        "detalle": "Cocción: suben y 1 minutos de hervor",
+        "precio": 175 ,
+        "imagen": "/imagenes/tallarines.png"
+    },
+    {
+        "id": 9, 
+        "descripcion": "Sorrentinos sin glúten de jamón y queso",
+        "detalle": "Cocción: suben y 2 minutos de hervor",
+        "precio": 330,
+        "imagen": "/imagenes/sorrentinos_sin_gluten.png"
+    },
+    {
+        "id": 10, 
+        "descripcion": "Ñoquis de harina",
+        "detalle": "Cocción: suben y 2 minutos de hervor",
+        "precio": 260,
+        "imagen": "/imagenes/nioquis_harina.png"
+    },
+    {
+        "id": 11, 
+        "descripcion": "Torta Rogel sin glúten",
+        "detalle": "Aproximadamente 1kg",
+        "precio": 330,
+        "imagen": "/imagenes/rogel.png"
+    },
+    {
+        "id": 12, 
+        "descripcion": "Tiramisú light" ,
+        "detalle": "Aproximadamente 1.5kg",
+        "precio": 350,
+        "imagen": "/imagenes/tiramisu_light.png"
+    },
+    {
+        "id": 13, 
+        "descripcion": "Chajá de dulce de leche",
+        "detalle": "Aproximadamente 1.5kg",
+        "precio": 290,
+        "imagen": "/imagenes/chaja.png"
+    },
+    {
+        "id": 14, 
+        "descripcion": "Lemon Pie",
+        "detalle": "Aproximadamente 1kg",
+        "precio": 310,
+        "imagen": "/imagenes/lemon_pie.png"
+    },
+    {
+        "id": 15, 
+        "descripcion": "Cheese Cake sin glúten",
+        "detalle": "Aproximadamente 1.5kg",
+        "precio": 350,
+        "imagen": "/imagenes/cheese_cake.png"
+    },
+    {
+        "id": 16, 
+        "descripcion": "Torta de Manzana",
+        "detalle": "Aproximadamente 1kg",
+        "precio": 260,
+        "imagen": "/imagenes/torta_manzana.png"
+    }
+]

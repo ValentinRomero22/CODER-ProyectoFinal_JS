@@ -372,11 +372,9 @@ footer {
 
 @media screen and (max-width: 768px) {
   h2 {
-    font-size: 1.5em; }
+    font-size: 1.8em; }
   h3 {
-    font-size: 1.2em; }
-  a {
-    font-size: 0.8em; }
+    font-size: 1.5em; }
   header {
     padding: 1% 10%; }
   form input {
@@ -389,15 +387,17 @@ footer {
     margin-bottom: 5%; }
   .seccionInfo {
     font-size: 1.2em; }
-  .ubicacion p {
-    margin-bottom: 3%; } }
+  .nav-item a {
+    font-size: 1em; }
+  .cuerpo p {
+    font-size: 1em; } }
 
 @media screen and (max-width: 480px) {
   a h3 {
     font-size: 1.5em; }
   h1 {
     font-size: 1.5em; }
-  .mapa iframe {
+  iframe {
     width: 280px;
     height: 250px; }
   .catalogo {
