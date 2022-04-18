@@ -1,5 +1,8 @@
 footer{
     @extend .flexJustifyCentrado;
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
     flex-direction: column;
     padding: 2% 15%;
     background-color: $claro;
