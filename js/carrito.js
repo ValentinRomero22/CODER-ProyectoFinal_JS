@@ -74,7 +74,11 @@ botonLimpiar.onclick = () =>{
 }
 
 botonProductos.onclick = () =>{
-    location.pathname = "/index.html";
+    location.pathname = "/paginas/index.html";
+}
+
+botonPedidos.onclick = () =>{
+    location.pathname = "/paginas/pedidos.html"
 }
 
 function limpiar(){

@@ -1,7 +1,7 @@
 cargarProductos();
 
 function cargarProductos(){
-    fetch("productos.json")
+    fetch("/json/productos.json")
         .then(respuesta => respuesta.json())
         .then(datos => listarProductos(datos))
 
@@ -34,7 +34,11 @@ function listarProductos(datos){
 }
 
 botonCarrito.onclick = () =>{
-    location.pathname = "/carrito.html";
+    location.pathname = "/paginas/carrito.html";
+}
+
+botonPedidos.onclick = () =>{
+    location.pathname = "/paginas/pedidos.html";
 }
 
 function agregarItem(id){

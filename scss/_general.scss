@@ -23,7 +23,7 @@ h1{
 }
 
 h2{
-    font-size: 20px;
+    font-size: 18px;
     color: $contraste;
 }
 
@@ -32,6 +32,7 @@ input{
 }
 
 .boton-nav{
+    margin-left: 25px;
     border: 0px solid transparent;
     border-bottom: 3px solid transparent;
     background-color: transparent;
@@ -45,10 +46,10 @@ input{
     }
 }
 
-.nav-carrito{
+.nav-menu{
     width: 30%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .caja-subtitulo{
@@ -136,7 +137,7 @@ input{
     justify-content: $centrado;
 }
 
-//carrito.html
+// css para carrito.html
 
 .carrito{
     margin: 0% 10%;
@@ -227,5 +228,13 @@ input{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+// css para pedidos.html
+
+.pedidos{
+    display: flex;
+    justify-items: center;
+    margin: 25px 10% 150px 10%;
 }
 

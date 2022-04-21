@@ -18,13 +18,14 @@ h1 {
   font-weight: bold; }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   color: #4B4B4B; }
 
 input {
   font-family: "Poppins"; }
 
 .boton-nav {
+  margin-left: 25px;
   border: 0px solid transparent;
   border-bottom: 3px solid transparent;
   background-color: transparent;
@@ -35,10 +36,10 @@ input {
     border-bottom: 3px solid #74554D;
     color: #74554D; }
 
-.nav-carrito {
+.nav-menu {
   width: 30%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: flex-end; }
 
 .caja-subtitulo {
   margin: 10px 10%; }
@@ -181,6 +182,11 @@ input {
   align-items: center;
   justify-content: center;
   text-align: center; }
+
+.pedidos {
+  display: flex;
+  justify-items: center;
+  margin: 25px 10% 150px 10%; }
 
 header {
   width: 100%;
