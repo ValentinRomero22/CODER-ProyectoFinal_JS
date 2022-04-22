@@ -238,3 +238,57 @@ input{
     margin: 25px 10% 150px 10%;
 }
 
+.tabla{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    th{
+        padding-bottom: 10px;
+        color: $contraste;
+    }
+
+    td{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.numero-tabla{
+    width: 5%;
+}
+
+.direccion-tabla{
+    width: 55%;
+}
+
+.total-tabla{
+    width: 5%;
+}
+
+.entregado-tabla{
+    width: 20%;
+}
+
+.detalle-tabla{
+    width: 15%;
+}
+
+.borde-tr{
+    border-bottom: 1px solid $claro;
+}
+
+.boton-detalle{
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.boton-detalle:hover{
+    border-color: $oscuro;
+    background-color: $oscuro;
+    border-radius: 5px;
+    color: $blanco;
+}
+

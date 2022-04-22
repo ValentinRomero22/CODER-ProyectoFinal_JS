@@ -2,76 +2,129 @@
     {
         "id": 1,
         "direccion": "Av. Los Cerros 1563",
-        "entregado": true,
+        "entregado": "05/02/2022",
         "lineas":[
             {
-                "idProducto": 1,
-                "producto": "Capeletis sin glúten",
+                "producto": 
+                {
+                    "id": 1, 
+                    "descripcion": "Sorrentinos de calabaza",
+                    "detalle": "Cocción: suben y 2 minutos de hervor",
+                    "precio": 310,
+                    "imagen": "/imagenes/sorrentinos_calabaza.png"
+                },
                 "cantidad": 2
             }
-        ]
+        ],
+        "importe": 620
     },
     {
         "id": 2,
         "direccion": "Piedra Lisa 671",
-        "entregado": true,
+        "entregado": "27/02/2022",
         "lineas":[
             {
-                "idProducto": 8,
-                "producto": "Tallarines al huevo",
+                "producto":
+                {
+                    "id": 8, 
+                    "descripcion": "Tallarines al huevo",
+                    "detalle": "Cocción: suben y 1 minutos de hervor",
+                    "precio": 175 ,
+                    "imagen": "/imagenes/tallarines.png"
+                },
                 "cantidad": 1
             },
             {
-                "idProducto": 14,
-                "producto": "Lemon Pie",
+                "producto":
+                {
+                    "id": 14, 
+                    "descripcion": "Lemon Pie",
+                    "detalle": "Aproximadamente 1kg",
+                    "precio": 310,
+                    "imagen": "/imagenes/lemon_pie.png"
+                },
                 "cantidad": 1
             }
-        ]
+        ],
+        "importe": 485
     },
     {
         "id": 3,
         "direccion": "Camino del Hornero 2463",
-        "entregado": true,
+        "entregado": "05/03/2022",
         "lineas":[
             {
-                "idProducto": 12,
-                "producto": "Tiramisú light",
+                "producto":
+                {
+                    "id": 12, 
+                    "descripcion": "Tiramisú light" ,
+                    "detalle": "Aproximadamente 1.5kg",
+                    "precio": 350,
+                    "imagen": "/imagenes/tiramisu_light.png"
+                },
                 "cantidad": 2
             }
-        ]
+        ],
+        "importe": 700
     },
     {
         "id": 4,
         "direccion": "Bv. Artigas 4269",
-        "entregado": true,
+        "entregado": "17/04/2022",
         "lineas":[
             {
-                "idProducto": 1,
-                "producto": "Sorrentinos de calabaza",
+                "producto": 
+                {
+                    "id": 1, 
+                    "descripcion": "Sorrentinos de calabaza",
+                    "detalle": "Cocción: suben y 2 minutos de hervor",
+                    "precio": 310,
+                    "imagen": "/imagenes/sorrentinos_calabaza.png"
+                },
                 "cantidad": 1
             }
-        ]
+        ],
+        "importe": 310
     },
     {
         "id": 5,
         "direccion": "8 de octubre 5943",
-        "entregado": false,
+        "entregado": null,
         "lineas": [
             {
-                "idProducto": 7,
-                "producto": "Tortelines",
+                "producto": 
+                {
+                    "id": 7, 
+                    "descripcion": "Tortelines",
+                    "detalle": "Cocción: suben y 3 minutos de hervor",
+                    "precio": 295,
+                    "imagen": "/imagenes/tortelines.png"
+                },
                 "cantidad": 2
             },
             {
-                "idProducto": 10,
-                "producto": "Ñoquis de harina",
+                "producto":
+                {
+                    "id": 10, 
+                    "descripcion": "Ñoquis de harina",
+                    "detalle": "Cocción: suben y 2 minutos de hervor",
+                    "precio": 260,
+                    "imagen": "/imagenes/nioquis_harina.png"
+                },
                 "cantidad": 1
             },
             {
-                "idProducto": 16,
-                "producto": "Torta de Manzana",
+                "producto":
+                {
+                    "id": 16, 
+                    "descripcion": "Torta de Manzana",
+                    "detalle": "Aproximadamente 1kg",
+                    "precio": 260,
+                    "imagen": "/imagenes/torta_manzana.png"
+                },
                 "cantidad": 1
             }
-        ]
+        ],
+        "importe": 1110
     }
 ]

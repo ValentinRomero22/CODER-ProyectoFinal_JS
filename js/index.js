@@ -1,4 +1,4 @@
-cargarProductos();
+cargarProductos()
 
 function cargarProductos(){
     fetch("/json/productos.json")
@@ -9,10 +9,10 @@ function cargarProductos(){
 
 function listarProductos(datos){
     for(dato of datos){
-        let {id, descripcion, detalle, precio, imagen} = dato;
+        let {id, descripcion, detalle, precio, imagen} = dato
         
-        producto = {id: id, descripcion: descripcion, detalle: detalle, precio: precio, imagen: imagen};
-        _productos.push(producto);
+        producto = {id: id, descripcion: descripcion, detalle: detalle, precio: precio, imagen: imagen}
+        _productos.push(producto)
         
         catalogo.innerHTML +=   "<article class='producto'>" +
                                     "<img class='imagen-producto' src='" + imagen + "'alt='Imagen'></img>" +
@@ -28,27 +28,26 @@ function listarProductos(datos){
                                             "<p>" + detalle +" </p>" + 
                                         "</div>" +
                                     "</div>" +
-                                "</article>"
-                            
+                                "</article>"                            
     }
 }
 
 botonCarrito.onclick = () =>{
-    location.pathname = "/paginas/carrito.html";
+    location.pathname = "/paginas/carrito.html"
 }
 
 botonPedidos.onclick = () =>{
-    location.pathname = "/paginas/pedidos.html";
+    location.pathname = "/paginas/pedidos.html"
 }
 
 function agregarItem(id){
     if(localStorage.getItem("items") != null)
-        _items = JSON.parse(localStorage.getItem("items"));
+        _items = JSON.parse(localStorage.getItem("items"))
         
-    producto = _productos[id - 1];
+    producto = _productos[id - 1]
     item = {producto: producto, cantidad: 0}
-    _items.push(item);
-    localStorage.setItem("items", JSON.stringify(_items));
+    _items.push(item)
+    localStorage.setItem("items", JSON.stringify(_items))
  
     Toastify({
         text: "Producto agregado al carrito",
@@ -59,5 +58,5 @@ function agregarItem(id){
             duration: 3000,
             stopOnFocus: true,
         }
-      }).showToast();
+      }).showToast()
 } 

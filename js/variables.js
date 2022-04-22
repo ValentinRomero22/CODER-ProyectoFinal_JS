@@ -11,6 +11,7 @@ const botonCarrito = document.getElementById("botonCarrito")
 const listaCarrito = document.getElementById("listaCarrito")
 const botonProductos = document.getElementById("botonProductos")
 const botonPedidos = document.getElementById("botonPedidos");
+const tablaPedidos = document.getElementById("tablaPedidos");
 
 function mostrarError(mensaje){
     Toastify({
@@ -22,7 +23,7 @@ function mostrarError(mensaje){
             duration: 3000,
             stopOnFocus: true,
         }
-      }).showToast();
+      }).showToast()
 }
 
 function mostrarConfirmacion(mensaje){
@@ -35,7 +36,7 @@ function mostrarConfirmacion(mensaje){
             duration: 3000,
             stopOnFocus: true,
         }
-      }).showToast();
+      }).showToast()
 }
 
 function mostrarAlerta(icono, titulo, boton, tiempo, texto){
