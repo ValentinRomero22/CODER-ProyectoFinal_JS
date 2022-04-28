@@ -11,7 +11,6 @@
     <script src="../js/variables.js" defer></script>
     <script src="../js/carrito.js" defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
@@ -30,17 +29,50 @@
         <h1>CARRITO DE COMPRAS</h1>
     </section>
     <div class="caja-boton-input">
-        <h2>Ingrese la cantidad para cada producto agregado y finalice su compra</h2>
+        <h2 id="subtitulo">Ingrese la cantidad para cada producto agregado y finalice su compra</h2>
         <input id="botonLimpiar" type="submit" value="VACIAR CARRITO" class="boton-limpiar">
     </div>  
-    <section class="carrito">
-        <ul id="listaCarrito">
-        </ul>
+    <section class="caja-tabla">
+        <table id="tablaCarrito" class="tabla"></table>
     </section>
-    <div class="caja-boton-input">
-        <input id="direccion" type="text" placeholder="Dirección de entrega" class="direccion">
-        <p id="total">Total: $</p>
-        <input id="botonAgregarPedido" type="submit" value="CONFIRMAR PEDIDO" class="boton-confirmar">
-    </div>
+    <section class="caja-boton-input">
+        <div class="caja-direccion">
+            <input id="direccion" type="text" placeholder="Dirección de entrega" class="direccion">
+        </div>
+        <div>
+            <p id="total"></p>
+        </div>
+        <div>
+            <input id="botonAgregarPedido" type="submit" value="CONFIRMAR PEDIDO" class="boton-confirmar">
+        </div>
+    </section>
+    <footer>
+        <div class="slogan">
+            <h2>Pastas Trivelli's</h2>
+            <p>Generaciones haciendo pastas</p>
+        </div>
+        <div class="redes">
+            <ul>
+                <li>
+                    <a href="#" class="facebook">
+                        <img class="iconoFacebook" src="../imagenes/facebook.png" alt="Facebook">
+                        <img class="iconoFacebook" src="../imagenes/facebookHover.png" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="instagram">
+                        <img class="iconoInstagram" src="../imagenes/instagram.png" alt="Instagram">
+                        <img class="iconoInstagram" src="../imagenes/instagramHover.png" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="youtube">
+                        <img class="iconoYoutube" src="../imagenes/youtube.png" alt="YouTube">
+                        <img class="iconoYoutube" src="../imagenes/youtubeHover.png" alt="YouTube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

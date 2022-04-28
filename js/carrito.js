@@ -2,27 +2,56 @@ mostrarCarrito()
 
 function mostrarCarrito(){
     if(localStorage.getItem("items") != null){
-        listaCarrito.innerHTML = ""
+
         _items = JSON.parse(localStorage.getItem("items"))
 
-        for(let i = 0; i < _items.length; i++){
-            item = _items[i]
-            listaCarrito.innerHTML +=   "<li>" +
-                                            "<div class='producto-carrito'> " + 
-                                                "<p id='carrito-producto'>" + item.producto.descripcion + "</p>" +
-                                            "</div>" + 
-                                            "<div class='cantidad'>" + 
-                                                "<input id= " + i + " type='number' placeholder='Cantidad' " + 
-                                                "onblur='calcularImporte(" + i + ")' min='1' max='9999'>" +
-                                            "</div>" + 
-                                            "<div class='importe'>" +
-                                                "<p id='importe-" + i + "'>Importe: $</p>" +
-                                            "</div>" +
-                                        "</li>"
+        if(_items.length != 0){
+            botonAgregarPedido.removeAttribute("hidden")
+            inputDireccion.removeAttribute("hidden")
+            botonLimpiar.removeAttribute("hidden")
+
+            tablaCarrito.innerHTML = ""
+            tablaCarrito.innerHTML += "<tr>" +
+                                        "<th class='tabla-width-40'>PRODUCTO</th>" + 
+                                        "<th class='tabla-width-20'>CANTIDAD</th>" + 
+                                        "<th class='tabla-width-20'>IMPORTE</th>" + 
+                                        "<th class='tabla-width-20'></th>" + 
+                                    "</tr>"
+
+            _items = JSON.parse(localStorage.getItem("items"))
+            for(let i = 0; i < _items.length; i++){
+                item = _items[i]
+                tablaCarrito.innerHTML += "<tr class='borde-tr'>" + 
+                                            "<td>" + item.producto.descripcion + "</td>" + 
+                                            "<td><input id= " + i + " class='cantidad-tabla' type='number' onblur='calcularImporte(" + i + ")' min='1' max='9999'>" +
+                                            "<td><p id='importe-" + i + "'>Importe: $</p></td>" +
+                                            "<td>" +
+                                                "<input id=" + i + " onclick='eliminarItem(" + i + ")' type='submit' value='QUITAR' class='boton-tabla'></div>" + 
+                                            "</td>" +
+                                        "</tr>"
+            }
+        }
+        else{
+            carritoVacio()
         }
     }
-    else
-        listaCarrito.innerHTML = "No tienes productos cargados al carrito."
+    else{
+        carritoVacio()
+    }
+}
+
+function eliminarItem(i){
+    let x = _items[i]
+
+    _auxiliar = _items.filter(function(i){
+        return i != x
+    })
+
+    _items = _auxiliar
+
+    localStorage.setItem("items", JSON.stringify(_items))
+    mostrarCarrito()
+    mostrarConfirmacion("Producto eliminado con éxito")
 }
 
 function calcularImporte(id){
@@ -35,42 +64,82 @@ function calcularImporte(id){
     }
     else{
         labelImporte = document.getElementById("importe-" + id.toString())
-        labelImporte.innerHTML = "Importe: $" + _items[id].producto.precio * txtCantidad.value
+        importe = _items[id].producto.precio * txtCantidad.value
+        labelImporte.innerHTML = "Importe: $" + importe
 
-        _items[id].cantidad = txtCantidad.value
-        localStorage.setItem("items", JSON.stringify(_items))
+        _totales[id] = importe
+        importesTotales = 0
+
+        for(t of _totales){
+            importesTotales += t
+        }
+
+        labelTotal.innerHTML = ""
+        labelTotal.innerHTML = "Total: $ " + importesTotales
     }
 }
 
 botonAgregarPedido.onclick = () =>{
-    if(isNaN(txtCantidad.value) || txtCantidad.value.trim() == "" || txtDireccion.value.trim() == ""){
+    banderaCantidad = false
+
+    for(let i = 1, fila; fila = tablaCarrito.rows[i]; i++){
+        let inputCantidad = document.getElementById(i - 1)
+        if(inputCantidad.value != ""){
+            cantidadTabla = parseInt(inputCantidad.value)
+            _items[i - 1].cantidad = cantidadTabla
+        }
+        else{
+            banderaCantidad == true
+            break
+        }
+    }
+
+    if(inputDireccion.value.trim() == "" || banderaCantidad == true){
         mostrarError("Por favor, ingrese los datos requeridos")
         return
     }
-    else{
-        
-        if(localStorage.getItem("contadorPedido") != null)
-            contadorPedido = parseInt(localStorage.getItem("contadorPedido"))
-        
-            total = 0
-
+    else{        
+        total = 0
         for(item of _items){
             total += item.producto.precio * item.cantidad
         }
 
-        pedido = {items: JSON.parse(localStorage.getItem("items")), direccion: txtDireccion.value, total: total}
-        _pedidos.push(pedido)
+        if(localStorage.getItem("contadorPedido") != null){
+            contadorPedido = JSON.parse(localStorage.getItem("contadorPedido"))
+        }
+        else{
+            contadorPedido = 6
+        }
+        
+        pedido = {id: contadorPedido, direccion: inputDireccion.value, _items, importe: total}
 
-        localStorage.setItem("pedidos", JSON.stringify(_pedidos))
+        if(localStorage.getItem("pedidos") != null)
+            _pedidosStorage = JSON.parse(localStorage.getItem("pedidos"))
+
+        _pedidosStorage.push(pedido)
+        localStorage.setItem("pedidos", JSON.stringify(_pedidosStorage))
+        
+        contadorPedido ++
+        localStorage.setItem("contadorPedido", JSON.stringify(contadorPedido))        
         
         limpiar()
-        mostrarAlerta("success", "Pedido ingresado con éxito", true, 2500, "Importe total: $" + pedido.total + ". Se entregará en: " + pedido.direccion)
+        mostrarConfirmacion("Pedido realizado con éxito!")
     }
 }
 
 botonLimpiar.onclick = () =>{
     limpiar()
-    mostrarAlerta("success", "Vaciaste tu carrito de compras!", "true", 2500, "")
+    carritoVacio()
+    mostrarConfirmacion("Ha vaciado su carrito de compras")
+}
+
+function carritoVacio(){
+    subtitulo.innerHTML = "No tienes productos cargados al carrito."
+    botonAgregarPedido.setAttribute("hidden", "")
+    inputDireccion.setAttribute("hidden", "")
+    botonLimpiar.setAttribute("hidden", "")
+    tablaCarrito.innerHTML = ""
+    labelTotal.innerHTML = ""
 }
 
 botonProductos.onclick = () =>{
@@ -84,10 +153,8 @@ botonPedidos.onclick = () =>{
 function limpiar(){
     if(localStorage.getItem("items") != null){
         localStorage.removeItem("items")
-        listaCarrito.innerHTML = "No tienes productos cargados al carrito."
+        carritoVacio()
         total = 0
     }
-    else
-        mostrarAlerta("error", "Tu carrito de compras ya está vacío", "false", 2500, "")
 }
 

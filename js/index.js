@@ -49,14 +49,5 @@ function agregarItem(id){
     _items.push(item)
     localStorage.setItem("items", JSON.stringify(_items))
  
-    Toastify({
-        text: "Producto agregado al carrito",
-        avatar: "/imagenes/ok.png",
-        style: {
-            color: "#FFFFFF",
-            background: "#4D9C3B",
-            duration: 3000,
-            stopOnFocus: true,
-        }
-      }).showToast()
+    mostrarConfirmacion("Producto agregado al carrito")
 } 

@@ -1,6 +1,12 @@
-cargarPedidos();
+mostrarCargador()
+
+setTimeout(() => {
+    ocultarCargador()
+    cargarPedidos()
+}, 2000)
 
 function cargarPedidos(){
+    ocultarCargador()
     fetch("/json/pedidos.json")
         .then(respuesta => respuesta.json())
         .then(datos => listarPedidos(datos))
@@ -11,11 +17,11 @@ function listarPedidos(datos){
     _pedidos = []
     tablaPedidos.innerHTML = ""
     tablaPedidos.innerHTML += "<tr>" +
-                                "<th class='numero-tabla'>NÚMERO</th>" +
-                                "<th class='direccion-tabla'>DIRECCIÓN DE ENRTEGA</th>" +
-                                "<th class='entregado-tabla'>ENTREGADO</th>" +
-                                "<th class='total-tabla'>TOTAL</th>" +
-                                "<th class='detalle-tabla'></th>" +
+                                "<th class='tabla-width-5'>NÚMERO</th>" +
+                                "<th class='tabla-width-55'>DIRECCIÓN DE ENRTEGA</th>" +
+                                "<th class='tabla-width-20'>ENTREGADO</th>" +
+                                "<th class='tabla-width-5'>TOTAL</th>" +
+                                "<th class='tabla-width-15'></th>" +
                             "</tr>"
 
     for(dato of datos){
@@ -31,8 +37,10 @@ function listarPedidos(datos){
         _items = []
     }
 
-    if(localStorage.getItem("pedidos") != null)
-        _pedidos += JSON.parse(localStorage.getItem("pedidos"))
+    if(localStorage.getItem("pedidos") != null){
+        _pedidosStorage = (JSON.parse(localStorage.getItem("pedidos")))
+        _pedidos = _pedidos.concat(_pedidosStorage)
+    }
 
     for(pedido of _pedidos){
         tablaPedidos.innerHTML += "<tr class='borde-tr'>" + 
@@ -41,9 +49,47 @@ function listarPedidos(datos){
                                     "<td>" + (pedido.entregado != null ? pedido.entregado : "No entregado") + "</td>" +
                                     "<td>$ " + pedido.importe + "</td>" + 
                                     "<td>" +
-                                    "<input id=" + pedido.id + " onclick='botonEntregar(" + pedido.id + ")' type='submit' value='VER DETALLE' class='boton-detalle'></div>" +
+                                        "<input id='boton_" + pedido.id + "' onclick='verDetalle(" + pedido.id + ")' type='submit' value='VER DETALLE' class='boton-tabla'></div>" +
+                                    "</td>" +
+                                "</tr>" + 
+                                "<tr>" + 
+                                    "<td colspan='5' style='padding: 0px 0px'>" +
+                                        "<table id='tabla_" + pedido.id + "' class='tabla-detalle'>" + 
+                                        "</table>" + 
                                     "</td>" +
                                 "</tr>"
+    }
+}
+
+function verDetalle(id){
+    botonDetalle = document.getElementById("boton_" + id)
+    tablaDetalle = document.getElementById("tabla_" + id)
+
+    if(botonDetalle.value == "VER DETALLE"){
+        botonDetalle.value = "OCULTAR DETALLE"
+
+        tablaDetalle.innerHTML = ""
+        tablaDetalle.innerHTML += "<tr class='cabecera-oculta'>" +                                     
+                                        "<td class='tabla-width-40'>Producto</td>" +
+                                        "<td class='tabla-width-40'>Precio</td>" +
+                                        "<td class='tabla-width-5'>Cantidad</td>" +
+                                        "<td class='tabla-width-15'>Importe</td>" +
+                                    "</tr>"
+
+        p = _pedidos[id - 1]
+
+        for(x of p._items){
+            tablaDetalle.innerHTML += "<tr class='fila-oculta'>" + 
+                                            "<td>" + x.producto.descripcion + "</td>" + 
+                                            "<td>$ " + x.producto.precio + "</td>" + 
+                                            "<td>" + x.cantidad + "</td>" + 
+                                            "<td>$ " + x.cantidad * x.producto.precio + "</td>" + 
+                                        "</tr>"
+        } 
+    }
+    else{
+        botonDetalle.value = "VER DETALLE"
+        tablaDetalle.innerHTML = ""
     }
 }
 
@@ -55,6 +101,12 @@ botonProductos.onclick = () =>{
     location.pathname = "/paginas/index.html"
 }
 
-function botonEntregar(id){
-    window.open("https://javascript.info")
+function ocultarCargador(){
+    cajaCargador.innerHTML = ""
+    subtituloPedidos.innerHTML = "Historial de pedidos"
+}
+
+function mostrarCargador(){
+    cajaCargador.innerHTML = "<div class='cargador'></div>"
+    subtituloPedidos.innerHTML = "Cargando pedidos..."
 }

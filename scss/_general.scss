@@ -8,11 +8,14 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: $fuente;
 }
 
 a{
-    text-decoration: $no;
+    text-decoration: none;
     color: $negro;
     font-size: 1em;
 }
@@ -33,16 +36,17 @@ input{
 
 .boton-nav{
     margin-left: 25px;
-    border: 0px solid transparent;
-    border-bottom: 3px solid transparent;
+    padding: 5px 10px;
     background-color: transparent;
+    border: 1px solid transparent;
     font-size: 14px;
     font-family: $fuente;
     font-weight: $negrita;
 
     &:hover{
-        border-bottom: 3px solid $oscuro;
-        color: $oscuro;
+        background-color: $negro;
+        color: $blanco;
+        border-radius: 5px;
     }
 }
 
@@ -124,56 +128,24 @@ input{
 .titulo{
     margin-top: 10px;
     font-size: 20px;
-    text-align: $centrado;
+    text-align: center;
 }
 
 .flexItemCentrado{
     display: flex;
-    align-items: $centrado;
+    align-items: center;
 }
 
 .flexJustifyCentrado{
     display: flex;
-    justify-content: $centrado;
-}
-
-// css para carrito.html
-
-.carrito{
-    margin: 0% 10%;
-    padding: 25px;
-    border: 1px solid $claro;
-    border-radius: 10px;
-
-    ul{
-        list-style: none;
-
-        li{
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-
-            &:last-child{
-                margin-bottom: 0px;
-            }
-        }
-    }
+    justify-content: center;
 }
 
 .caja-boton-input{
-    margin: 15px 10% 20px 10%;
+    margin: 35px 10% 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.direccion{
-    width: 50%;
-    height: max-content;
-    padding-left: 5px;
-    border: 1px solid $gris;
-    border-radius: 5px;
-    font-size: 14px;
 }
 
 .boton-confirmar{
@@ -206,36 +178,30 @@ input{
     }
 }
 
-.producto-carrito{
-    width: 50%;
+.cantidad-tabla{
+    width: 20%;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $gris
 }
 
-.cantidad{
-    width: 10%;
-    text-align: center;
-
-    input{
-        width: 100%;
-        padding-left: 5px;
-        border-radius: 5px;
-        border: 1px solid $gris;
-        font-size: 14px;
-    }
+.caja-direccion{
+    width: 55%;
+    padding: 0px 20px;
 }
 
-.importe{
-    width: 35%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.direccion{
+    width: 100%;
+    border: solid transparent;
+    border-bottom: 1px solid $gris;
+    font-size: 16px;
 }
 
 // css para pedidos.html
 
-.pedidos{
+.caja-tabla{
     display: flex;
     justify-items: center;
-    margin: 25px 10% 150px 10%;
+    margin: 25px 10% 50px 10%;
 }
 
 .tabla{
@@ -249,46 +215,92 @@ input{
     }
 
     td{
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 15px 0px;
     }
 }
 
-.numero-tabla{
-    width: 5%;
+.tabla-width-60{
+    width: 60%;
 }
 
-.direccion-tabla{
+.tabla-width-55{
     width: 55%;
 }
 
-.total-tabla{
-    width: 5%;
+.tabla-width-40{
+    width: 40%;
 }
 
-.entregado-tabla{
+.tabla-width-30{
+    width: 30%;
+}
+
+.tabla-width-20{
     width: 20%;
 }
 
-.detalle-tabla{
+.tabla-width-15{
     width: 15%;
+}
+
+.tabla-width-5{
+    width: 5%;
 }
 
 .borde-tr{
     border-bottom: 1px solid $claro;
 }
 
-.boton-detalle{
+.boton-tabla{
+    min-width: 80%;
     padding: 5px 10px;
     font-size: 14px;
     border: 1px solid transparent;
     background-color: transparent;
+
+    &:hover{
+        border-color: $negro;
+        background-color: $negro;
+        border-radius: 5px;
+        color: $blanco;
+    }
 }
 
-.boton-detalle:hover{
-    border-color: $oscuro;
-    background-color: $oscuro;
-    border-radius: 5px;
-    color: $blanco;
+.tabla-detalle{
+    font-size: 14px;
+    border-collapse: collapse;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: $claro;
+    animation-duration: 5s
 }
 
+.cabecera-oculta{
+    color: $contraste;
+}
+
+.caja-cargador{
+    display: flex;
+    justify-content: center;
+}
+
+.cargador {
+    width: 70px;
+    height: 70px;
+    border: 10px solid $blanco;
+    border-top: 10px solid $claro;
+    border-radius: 50%;
+    animation-name: girar;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
