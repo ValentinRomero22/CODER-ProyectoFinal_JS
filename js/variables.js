@@ -19,6 +19,7 @@ let banderaCantidad
 let cantidadTabla
 let contadorPedido
 
+
 const catalogo = document.getElementById("catalogo")
 const botonCarrito = document.getElementById("botonCarrito")
 const tablaCarrito = document.getElementById("tablaCarrito")

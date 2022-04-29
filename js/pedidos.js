@@ -70,16 +70,16 @@ function verDetalle(id){
 
         tablaDetalle.innerHTML = ""
         tablaDetalle.innerHTML += "<tr class='cabecera-oculta'>" +                                     
-                                        "<td class='tabla-width-40'>Producto</td>" +
-                                        "<td class='tabla-width-40'>Precio</td>" +
-                                        "<td class='tabla-width-5'>Cantidad</td>" +
-                                        "<td class='tabla-width-15'>Importe</td>" +
+                                        "<td class='tabla-width-40 cabecera-oculta'>Producto</td>" +
+                                        "<td class='tabla-width-40 cabecera-oculta'>Precio</td>" +
+                                        "<td class='tabla-width-5 cabecera-oculta'>Cantidad</td>" +
+                                        "<td class='tabla-width-15 cabecera-oculta'>Importe</td>" +
                                     "</tr>"
 
         p = _pedidos[id - 1]
 
         for(x of p._items){
-            tablaDetalle.innerHTML += "<tr class='fila-oculta'>" + 
+            tablaDetalle.innerHTML += "<tr>" + 
                                             "<td>" + x.producto.descripcion + "</td>" + 
                                             "<td>$ " + x.producto.precio + "</td>" + 
                                             "<td>" + x.cantidad + "</td>" + 

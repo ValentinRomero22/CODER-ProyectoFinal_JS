@@ -42,12 +42,17 @@ function mostrarCarrito(){
 
 function eliminarItem(i){
     let x = _items[i]
+    let z = _totales[i]
 
     _auxiliar = _items.filter(function(i){
         return i != x
     })
 
     _items = _auxiliar
+
+    _totales = []
+    importesTotales = 0
+    labelTotal.innerHTML = ""
 
     localStorage.setItem("items", JSON.stringify(_items))
     mostrarCarrito()
@@ -71,10 +76,10 @@ function calcularImporte(id){
         importesTotales = 0
 
         for(t of _totales){
-            importesTotales += t
+            if(!isNaN(t))
+                importesTotales += t
         }
 
-        labelTotal.innerHTML = ""
         labelTotal.innerHTML = "Total: $ " + importesTotales
     }
 }
@@ -89,7 +94,7 @@ botonAgregarPedido.onclick = () =>{
             _items[i - 1].cantidad = cantidadTabla
         }
         else{
-            banderaCantidad == true
+            banderaCantidad = true
             break
         }
     }
