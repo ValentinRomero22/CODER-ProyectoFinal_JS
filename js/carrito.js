@@ -50,6 +50,7 @@ function eliminarItem(i){
 
     _items = _auxiliar
 
+    //reseteo totales y la variable que almacena e imprime el total
     _totales = []
     importesTotales = 0
     labelTotal.innerHTML = ""
@@ -87,6 +88,7 @@ function calcularImporte(id){
 botonAgregarPedido.onclick = () =>{
     banderaCantidad = false
 
+    //tomo las cantidadades desde el input que hay en la tabla
     for(let i = 1, fila; fila = tablaCarrito.rows[i]; i++){
         let inputCantidad = document.getElementById(i - 1)
         if(inputCantidad.value != ""){
@@ -148,7 +150,7 @@ function carritoVacio(){
 }
 
 botonProductos.onclick = () =>{
-    location.pathname = "/paginas/index.html"
+    location.pathname = "../index.html"
 }
 
 botonPedidos.onclick = () =>{

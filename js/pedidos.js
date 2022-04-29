@@ -1,5 +1,6 @@
 mostrarCargador()
 
+//simulador de carga de productos
 setTimeout(() => {
     ocultarCargador()
     cargarPedidos()
@@ -37,6 +38,7 @@ function listarPedidos(datos){
         _items = []
     }
 
+    //si tengo pedidos nuevos, los sumo a os que tengo en el pedidos.json
     if(localStorage.getItem("pedidos") != null){
         _pedidosStorage = (JSON.parse(localStorage.getItem("pedidos")))
         _pedidos = _pedidos.concat(_pedidosStorage)
@@ -98,7 +100,7 @@ botonCarrito.onclick = () =>{
 }
 
 botonProductos.onclick = () =>{
-    location.pathname = "/paginas/index.html"
+    location.pathname = "../index.html"
 }
 
 function ocultarCargador(){
