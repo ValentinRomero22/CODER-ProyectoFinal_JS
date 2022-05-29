@@ -2,6 +2,7 @@ mostrarCarrito()
 
 function mostrarCarrito(){
     if(localStorage.getItem("items") != null){
+        cajaItems.classList.add("caja-pedidos")
         let contenedorTitulo = document.createElement("div")
         contenedorTitulo.classList.add("contenedor-titulo")
         let tablaTitulo = document.createElement("table")
@@ -10,7 +11,7 @@ function mostrarCarrito(){
         contenedorItem.classList.add("contenedor-info")
         let tablaItem = document.createElement("table")
         tablaItem.classList.add("tabla")
-
+        
         _items = JSON.parse(localStorage.getItem("items"))
 
         if(_items.length != 0){
@@ -161,14 +162,16 @@ function carritoVacio(){
     botonLimpiar.setAttribute("hidden", "")
     tablaCarrito.innerHTML = ""
     labelTotal.innerHTML = ""
+    cajaItems.innerHTML = ""
+    cajaItems.classList.remove("caja-pedidos")
 }
 
 botonProductos.onclick = () =>{
-    location.pathname = "../index.html"
+    location.pathname = "/index.html"
 }
 
 botonPedidos.onclick = () =>{
-    location.pathname = "../paginas/pedidos.html"
+    location.pathname = "/paginas/pedidos.html"
 }
 
 function limpiar(){
