@@ -1,6 +1,6 @@
 mostrarCargador()
 
-//simulador de carga de productos
+//simulador de carga de productos 
 setTimeout(() => {
     ocultarCargador()
     cargarPedidos()
@@ -11,19 +11,13 @@ function cargarPedidos(){
     fetch("/json/pedidos.json")
         .then(respuesta => respuesta.json())
         .then(datos => listarPedidos(datos))
-
 }
 
 function listarPedidos(datos){
-    _pedidos = []
-    tablaPedidos.innerHTML = ""
-    tablaPedidos.innerHTML += "<tr>" +
-                                "<th class='tabla-width-5'>NÚMERO</th>" +
-                                "<th class='tabla-width-55'>DIRECCIÓN DE ENRTEGA</th>" +
-                                "<th class='tabla-width-20'>ENTREGADO</th>" +
-                                "<th class='tabla-width-5'>TOTAL</th>" +
-                                "<th class='tabla-width-15'></th>" +
-                            "</tr>"
+    cajaPedidos.classList.add('caja-pedidos')
+    let contenedorTitulo = document.createElement("div")
+    contenedorTitulo.classList.add('contenedor-titulo')
+    let tablaTitulo = document.createElement("table")
 
     for(dato of datos){
         for(linea of dato.lineas){
@@ -33,70 +27,101 @@ function listarPedidos(datos){
         }
 
         let {id, direccion, entregado, importe} = dato
+
         pedido = {id, direccion, entregado, _items, importe}
         _pedidos.push(pedido)
         _items = []
     }
 
-    //si tengo pedidos nuevos, los sumo a os que tengo en el pedidos.json
     if(localStorage.getItem("pedidos") != null){
         _pedidosStorage = (JSON.parse(localStorage.getItem("pedidos")))
         _pedidos = _pedidos.concat(_pedidosStorage)
     }
 
+    tablaTitulo.innerHTML = ""
+    tablaTitulo.innerHTML = "<tr>" +
+                                "<th class='tabla-width-5'>NÚMERO</th>" +
+                                "<th class='tabla-width-55'>DIRECCIÓN DE ENRTEGA</th>" +
+                                "<th class='tabla-width-20'>ENTREGADO</th>" +
+                                "<th class='tabla-width-5'>TOTAL</th>" +
+                                "<th class='tabla-width-15'></th>" +
+                            "</tr>"
+    
+    contenedorTitulo.appendChild(tablaTitulo)
+    cajaPedidos.appendChild(contenedorTitulo)
+
     for(pedido of _pedidos){
-        tablaPedidos.innerHTML += "<tr class='borde-tr'>" + 
-                                    "<td>" + pedido.id + "</td>" +
-                                    "<td>" + pedido.direccion + "</td>" +
-                                    "<td>" + (pedido.entregado != null ? pedido.entregado : "No entregado") + "</td>" +
-                                    "<td>$ " + pedido.importe + "</td>" + 
-                                    "<td>" +
-                                        "<input id='boton_" + pedido.id + "' onclick='verDetalle(" + pedido.id + ")' type='submit' value='VER DETALLE' class='boton-tabla'></div>" +
-                                    "</td>" +
-                                "</tr>" + 
-                                "<tr>" + 
-                                    "<td colspan='5' style='padding: 0px 0px'>" +
-                                        "<table id='tabla_" + pedido.id + "' class='tabla-detalle'>" + 
-                                        "</table>" + 
-                                    "</td>" +
-                                "</tr>"
-    }
-}
-
-function verDetalle(id){
-    botonDetalle = document.getElementById("boton_" + id)
-    tablaDetalle = document.getElementById("tabla_" + id)
-
-    if(botonDetalle.value == "VER DETALLE"){
-        botonDetalle.value = "OCULTAR DETALLE"
-
-        tablaDetalle.innerHTML = ""
-        tablaDetalle.innerHTML += "<tr class='cabecera-oculta'>" +                                     
-                                        "<td class='tabla-width-40 cabecera-oculta'>Producto</td>" +
-                                        "<td class='tabla-width-40 cabecera-oculta'>Precio</td>" +
-                                        "<td class='tabla-width-5 cabecera-oculta'>Cantidad</td>" +
-                                        "<td class='tabla-width-15 cabecera-oculta'>Importe</td>" +
+        let contenedorPedido = document.createElement("div")
+        contenedorPedido.classList.add("contenedor-pedido")
+        let contenedorInfoPedido = document.createElement("div")
+        contenedorInfoPedido.classList.add("contenedor-info")
+        let tablaInfoPedido = document.createElement("table")
+        tablaInfoPedido.classList.add("tabla")
+        let contenedorDetallePedido = document.createElement("div")
+        contenedorDetallePedido.classList.add('contenedor-detalle')
+        let tablaDetallePedido = document.createElement("table")
+        tablaDetallePedido.classList.add("tabla")
+        
+        tablaInfoPedido.innerHTML += "<tr>" + 
+                                        "<td class='tabla-width-5'>" + pedido.id + "</td>" +
+                                        "<td class='tabla-width-55'>" + pedido.direccion + "</td>" +
+                                        "<td class='tabla-width-20'>" + (pedido.entregado != null ? pedido.entregado : "No entregado") + "</td>" +
+                                        "<td class='tabla-width-5'>$ " + pedido.importe + "</td>" + 
+                                        "<td class='tabla-width-15'>" +
+                                            "<input id='boton_" + pedido.id + "' type='submit' value='VER DETALLE' class='boton-tabla'></div>" +
+                                        "</td>" +
                                     "</tr>"
+        
+        contenedorInfoPedido.appendChild(tablaInfoPedido)
 
-        p = _pedidos[id - 1]
-
-        for(x of p._items){
-            tablaDetalle.innerHTML += "<tr>" + 
-                                            "<td>" + x.producto.descripcion + "</td>" + 
-                                            "<td>$ " + x.producto.precio + "</td>" + 
-                                            "<td>" + x.cantidad + "</td>" + 
-                                            "<td>$ " + x.cantidad * x.producto.precio + "</td>" + 
+        tablaDetallePedido.innerHTML = ""
+        tablaDetallePedido.innerHTML = "<tr>" +                                     
+                                            "<td class='tabla-width-40 cabecera-oculta'>Producto</td>" +
+                                            "<td class='tabla-width-40 cabecera-oculta'>Precio</td>" +
+                                            "<td class='tabla-width-5 cabecera-oculta'>Cantidad</td>" +
+                                            "<td class='tabla-width-15 cabecera-oculta'>Importe</td>" +
                                         "</tr>"
-        } 
+
+        for(x of pedido._items){
+            tablaDetallePedido.innerHTML += "<tr>" + 
+                                                "<td>" + x.producto.descripcion + "</td>" + 
+                                                "<td>$ " + x.producto.precio + "</td>" + 
+                                                "<td>" + x.cantidad + "</td>" + 
+                                                "<td>$ " + x.cantidad * x.producto.precio + "</td>" + 
+                                            "</tr>"
+
+            contenedorDetallePedido.appendChild(tablaDetallePedido)
+        }
+
+        contenedorPedido.appendChild(contenedorInfoPedido)
+        contenedorPedido.appendChild(contenedorDetallePedido)        
+
+        cajaPedidos.appendChild(contenedorPedido)
     }
-    else{
-        botonDetalle.value = "VER DETALLE"
-        tablaDetalle.innerHTML = ""
-    }
+
+    let boton = document.querySelectorAll('.boton-tabla')
+    let caja = document.querySelectorAll('.contenedor-detalle')
+
+    boton.forEach((cadaBoton, i) =>{
+        boton[i].addEventListener('click', () =>{
+            if(boton[i].getAttribute('value') == "VER DETALLE"){
+                caja.forEach((cadaCaja, i) =>{
+                    caja[i].classList.remove('caja-visible')
+                    boton[i].setAttribute('value', 'VER DETALLE')
+                })
+                caja[i].classList.add('caja-visible')
+                boton[i].setAttribute('value', 'OCULTAR DETALLE')
+            } 
+            else{
+                caja[i].classList.remove('caja-visible')
+                boton[i].setAttribute('value', 'VER DETALLE')
+            }
+        })
+    })
 }
 
 botonCarrito.onclick = () =>{
-    location.pathname = "/paginas/carrito.html"
+    location.pathname = "../paginas/carrito.html"
 }
 
 botonProductos.onclick = () =>{
@@ -105,7 +130,7 @@ botonProductos.onclick = () =>{
 
 function ocultarCargador(){
     cajaCargador.innerHTML = ""
-    subtituloPedidos.innerHTML = "Historial de pedidos"
+    subtituloPedidos.innerHTML = "Listado de pedidos"
 }
 
 function mostrarCargador(){

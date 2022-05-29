@@ -9,7 +9,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "Poppins"; }
+  font-family: "Poppins";
+  overflow-y: scroll; }
 
 a {
   text-decoration: none;
@@ -46,7 +47,8 @@ input {
   justify-content: flex-end; }
 
 .caja-subtitulo {
-  margin: 10px 10%; }
+  margin: 10px 10%;
+  text-align: center; }
 
 .catalogo {
   display: grid;
@@ -60,8 +62,9 @@ input {
   width: 100%;
   position: relative;
   padding-bottom: 30px;
-  border: 1px solid #EBCFB8;
-  border-radius: 10px; }
+  border: 1px solid #F1F1F1;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px -10px; }
 
 .imagen-producto {
   width: 100%;
@@ -161,32 +164,60 @@ input {
   border-bottom: 1px solid #CCCCCC;
   font-size: 16px; }
 
-.caja-tabla {
-  display: flex;
-  justify-items: center;
-  margin: 25px 10% 50px 10%; }
+.caja-pedidos {
+  margin: 25px 10% 50px 10%;
+  padding: 1% 2%;
+  border: 1px solid #F1F1F1;
+  border-radius: 10px;
+  box-shadow: 10px 10px 45px -25px; }
+
+.contenedor-pedido {
+  padding: .5% 0%;
+  justify-content: center;
+  margin: 1% 0%;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px -25px;
+  background-color: #EBCFB8; }
+
+.contenedor-titulo {
+  background-color: #EBCFB8;
+  border: 1px solid #F1F1F1;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px -25px;
+  margin-bottom: 10px;
+  padding: 1% .5%; }
+
+.contenedor-info {
+  width: 100%;
+  border: 1px solid #F1F1F1;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px -25px;
+  background-color: #FFFFFF; }
+
+.caja-pedidos .contenedor-detalle {
+  height: 0;
+  padding: 0em;
+  overflow: hidden;
+  transition: all 0.5s ease; }
+
+.contenedor-detalle.caja-visible {
+  height: 20%;
+  margin: 1% 0%; }
 
 .tabla {
   width: 100%;
-  text-align: center;
-  border-collapse: collapse; }
+  text-align: center; }
   .tabla th {
     padding-bottom: 10px;
     color: #4B4B4B; }
   .tabla td {
     padding: 15px 0px; }
 
-.tabla-width-60 {
-  width: 60%; }
-
 .tabla-width-55 {
   width: 55%; }
 
 .tabla-width-40 {
   width: 40%; }
-
-.tabla-width-30 {
-  width: 30%; }
 
 .tabla-width-20 {
   width: 20%; }
@@ -212,16 +243,13 @@ input {
     border-radius: 5px;
     color: #FFFFFF; }
 
-.tabla-detalle {
-  font-size: 14px;
-  border-collapse: collapse;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: #EBCFB8;
-  animation-duration: 5s; }
-
 .cabecera-oculta {
   color: #4B4B4B; }
+
+.fila-oculta {
+  background-color: aqua;
+  height: 0;
+  overflow: hidden; }
 
 .caja-cargador {
   display: flex;

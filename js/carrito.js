@@ -2,6 +2,14 @@ mostrarCarrito()
 
 function mostrarCarrito(){
     if(localStorage.getItem("items") != null){
+        let contenedorTitulo = document.createElement("div")
+        contenedorTitulo.classList.add("contenedor-titulo")
+        let tablaTitulo = document.createElement("table")
+        tablaTitulo.classList.add("tabla")
+        let contenedorItem = document.createElement("div")
+        contenedorItem.classList.add("contenedor-info")
+        let tablaItem = document.createElement("table")
+        tablaItem.classList.add("tabla")
 
         _items = JSON.parse(localStorage.getItem("items"))
 
@@ -10,26 +18,33 @@ function mostrarCarrito(){
             inputDireccion.removeAttribute("hidden")
             botonLimpiar.removeAttribute("hidden")
 
-            tablaCarrito.innerHTML = ""
-            tablaCarrito.innerHTML += "<tr>" +
+            tablaTitulo.innerHTML = ""
+            tablaTitulo.innerHTML += "<tr>" +
                                         "<th class='tabla-width-40'>PRODUCTO</th>" + 
                                         "<th class='tabla-width-20'>CANTIDAD</th>" + 
                                         "<th class='tabla-width-20'>IMPORTE</th>" + 
                                         "<th class='tabla-width-20'></th>" + 
                                     "</tr>"
 
+            contenedorTitulo.appendChild(tablaTitulo)
+
             _items = JSON.parse(localStorage.getItem("items"))
             for(let i = 0; i < _items.length; i++){
                 item = _items[i]
-                tablaCarrito.innerHTML += "<tr class='borde-tr'>" + 
-                                            "<td>" + item.producto.descripcion + "</td>" + 
-                                            "<td><input id= " + i + " class='cantidad-tabla' type='number' onblur='calcularImporte(" + i + ")' min='1' max='9999'>" +
-                                            "<td><p id='importe-" + i + "'>Importe: $</p></td>" +
-                                            "<td>" +
+                tablaItem.innerHTML += "<tr class='borde-tr'>" + 
+                                            "<td class='tabla-width-40'>" + item.producto.descripcion + "</td>" + 
+                                            "<td class='tabla-width-20'><input id= " + i + " class='cantidad-tabla' type='number' onblur='calcularImporte(" + i + ")' min='1' max='9999'>" +
+                                            "<td class='tabla-width-20'><p id='importe-" + i + "'>$</p></td>" +
+                                            "<td class='tabla-width-20'>" +
                                                 "<input id=" + i + " onclick='eliminarItem(" + i + ")' type='submit' value='QUITAR' class='boton-tabla'></div>" + 
                                             "</td>" +
                                         "</tr>"
+                
+                contenedorItem.appendChild(tablaItem)
             }
+
+            cajaItems.appendChild(contenedorTitulo)
+            cajaItems.appendChild(contenedorItem)
         }
         else{
             carritoVacio()
@@ -42,7 +57,6 @@ function mostrarCarrito(){
 
 function eliminarItem(i){
     let x = _items[i]
-    let z = _totales[i]
 
     _auxiliar = _items.filter(function(i){
         return i != x
@@ -154,7 +168,7 @@ botonProductos.onclick = () =>{
 }
 
 botonPedidos.onclick = () =>{
-    location.pathname = "/paginas/pedidos.html"
+    location.pathname = "../paginas/pedidos.html"
 }
 
 function limpiar(){
@@ -164,4 +178,3 @@ function limpiar(){
         total = 0
     }
 }
-
