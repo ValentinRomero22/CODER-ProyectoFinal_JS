@@ -11,7 +11,7 @@
                     "descripcion": "Sorrentinos de calabaza",
                     "detalle": "Cocción: suben y 2 minutos de hervor",
                     "precio": 310,
-                    "imagen": "/imagenes/sorrentinos_calabaza.png"
+                    "imagen": "imagenes/sorrentinos_calabaza.png"
                 },
                 "cantidad": 2
             }
@@ -30,7 +30,7 @@
                     "descripcion": "Tallarines al huevo",
                     "detalle": "Cocción: suben y 1 minutos de hervor",
                     "precio": 175 ,
-                    "imagen": "/imagenes/tallarines.png"
+                    "imagen": "imagenes/tallarines.png"
                 },
                 "cantidad": 1
             },
@@ -41,7 +41,7 @@
                     "descripcion": "Lemon Pie",
                     "detalle": "Aproximadamente 1kg",
                     "precio": 310,
-                    "imagen": "/imagenes/lemon_pie.png"
+                    "imagen": "imagenes/lemon_pie.png"
                 },
                 "cantidad": 1
             }
@@ -60,7 +60,7 @@
                     "descripcion": "Tiramisú light" ,
                     "detalle": "Aproximadamente 1.5kg",
                     "precio": 350,
-                    "imagen": "/imagenes/tiramisu_light.png"
+                    "imagen": "imagenes/tiramisu_light.png"
                 },
                 "cantidad": 2
             }
@@ -79,7 +79,7 @@
                     "descripcion": "Sorrentinos de calabaza",
                     "detalle": "Cocción: suben y 2 minutos de hervor",
                     "precio": 310,
-                    "imagen": "/imagenes/sorrentinos_calabaza.png"
+                    "imagen": "imagenes/sorrentinos_calabaza.png"
                 },
                 "cantidad": 1
             }
@@ -98,7 +98,7 @@
                     "descripcion": "Tortelines",
                     "detalle": "Cocción: suben y 3 minutos de hervor",
                     "precio": 295,
-                    "imagen": "/imagenes/tortelines.png"
+                    "imagen": "imagenes/tortelines.png"
                 },
                 "cantidad": 2
             },
@@ -109,7 +109,7 @@
                     "descripcion": "Ñoquis de harina",
                     "detalle": "Cocción: suben y 2 minutos de hervor",
                     "precio": 260,
-                    "imagen": "/imagenes/nioquis_harina.png"
+                    "imagen": "imagenes/nioquis_harina.png"
                 },
                 "cantidad": 1
             },
@@ -120,7 +120,7 @@
                     "descripcion": "Torta de Manzana",
                     "detalle": "Aproximadamente 1kg",
                     "precio": 260,
-                    "imagen": "/imagenes/torta_manzana.png"
+                    "imagen": "imagenes/torta_manzana.png"
                 },
                 "cantidad": 1
             }

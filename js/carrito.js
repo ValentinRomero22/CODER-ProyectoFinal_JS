@@ -167,11 +167,11 @@ function carritoVacio(){
 }
 
 botonProductos.onclick = () =>{
-    location.pathname = "/index.html"
+    location.pathname = "index.html"
 }
 
 botonPedidos.onclick = () =>{
-    location.pathname = "/paginas/pedidos.html"
+    location.pathname = "paginas/pedidos.html"
 }
 
 function limpiar(){
