@@ -37,7 +37,7 @@ botonCarrito.onclick = () =>{
 }
 
 botonPedidos.onclick = () =>{
-    location.pathname = "/paginas/pedidos.html"
+    location.pathname = "../index.html"
 }
 
 function agregarItem(id){
