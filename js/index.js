@@ -33,11 +33,11 @@ function listarProductos(datos){
 }
 
 botonCarrito.onclick = () =>{
-    location.pathname = "paginas/carrito.html"
+    location.pathname = "../paginas/carrito.html"
 }
 
 botonPedidos.onclick = () =>{
-    location.pathname = "paginas/pedidos.html"
+    location.pathname = "/paginas/pedidos.html"
 }
 
 function agregarItem(id){
