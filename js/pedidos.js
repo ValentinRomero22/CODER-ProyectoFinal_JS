@@ -8,7 +8,7 @@ setTimeout(() => {
 
 function cargarPedidos(){
     ocultarCargador()
-    fetch("../json/pedidos.json")
+    fetch("/json/pedidos.json")
         .then(respuesta => respuesta.json())
         .then(datos => listarPedidos(datos))
 }
