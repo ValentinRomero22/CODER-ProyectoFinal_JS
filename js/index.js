@@ -32,14 +32,6 @@ function listarProductos(datos){
     }
 }
 
-botonCarrito.onclick = () =>{
-    location.href = "../paginas/carrito.html"
-}
-
-botonPedidos.onclick = () =>{
-    location.pathname = "../index.html"
-}
-
 function agregarItem(id){
     if(localStorage.getItem("items") != null)
         _items = JSON.parse(localStorage.getItem("items"))

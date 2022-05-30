@@ -166,14 +166,6 @@ function carritoVacio(){
     cajaItems.classList.remove("caja-pedidos")
 }
 
-botonProductos.onclick = () =>{
-    location.pathname = "index.html"
-}
-
-botonPedidos.onclick = () =>{
-    location.pathname = "paginas/pedidos.html"
-}
-
 function limpiar(){
     if(localStorage.getItem("items") != null){
         localStorage.removeItem("items")

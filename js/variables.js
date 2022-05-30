@@ -21,10 +21,7 @@ let contadorPedido
 
 
 const catalogo = document.getElementById("catalogo")
-const botonCarrito = document.getElementById("botonCarrito")
 const tablaCarrito = document.getElementById("tablaCarrito")
-const botonProductos = document.getElementById("botonProductos")
-const botonPedidos = document.getElementById("botonPedidos")
 const cajaPedidos = document.getElementById("caja-pedidos")
 const cajaItems = document.getElementById("caja-items")
 const labelTotal = document.getElementById("total")

@@ -8,7 +8,7 @@ setTimeout(() => {
 
 function cargarPedidos(){
     ocultarCargador()
-    fetch("json/pedidos.json")
+    fetch("../json/pedidos.json")
         .then(respuesta => respuesta.json())
         .then(datos => listarPedidos(datos))
 }
@@ -118,14 +118,6 @@ function listarPedidos(datos){
             }
         })
     })
-}
-
-botonCarrito.onclick = () =>{
-    location.pathname = "paginas/carrito.html"
-}
-
-botonProductos.onclick = () =>{
-    location.pathname = "index.html"
 }
 
 function ocultarCargador(){
