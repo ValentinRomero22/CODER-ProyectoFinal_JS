@@ -35,7 +35,7 @@ const subtituloPedidos = document.getElementById("subtituloPedidos")
 function mostrarError(mensaje){
     Toastify({
         text: mensaje,
-        avatar: "imagenes/error.png",
+        avatar: "../imagenes/error.png",
         style: {            
             color: "#FFFFFF",
             background: "#F51D0C",
@@ -48,7 +48,7 @@ function mostrarError(mensaje){
 function mostrarConfirmacion(mensaje){
     Toastify({
         text: mensaje,
-        avatar: "imagenes/ok.png",
+        avatar: "../imagenes/ok.png",
         style: {
             color: "#FFFFFF",
             background: "#4D9C3B",

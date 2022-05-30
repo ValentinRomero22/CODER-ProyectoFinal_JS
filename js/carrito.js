@@ -2,6 +2,7 @@ mostrarCarrito()
 
 function mostrarCarrito(){
     if(localStorage.getItem("items") != null){
+        cajaItems.innerHTML = ""
         cajaItems.classList.add("caja-pedidos")
         let contenedorTitulo = document.createElement("div")
         contenedorTitulo.classList.add("contenedor-titulo")
